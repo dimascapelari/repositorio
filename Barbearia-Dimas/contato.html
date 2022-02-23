@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Contato - Barbearia Dimas</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="caixa">
+            <h1><img src="Logo-Dimas.png" class="logo-cabecalho" alt="Logo da Barbearia Alura"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <form form action="https://formsubmit.co/dimas.capelari@gmail.com" method="POST">
+
+        
+            <label for="nomesobrenome">Nome e Sobrenome</label>
+            <input type="text" name="Nome e Sobrenome" id="nomesobrenome" class="input-padrao" required>
+
+            <label for="email">Email</label>
+            <input type="email" name="Email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+
+
+
+            <label for="telefone">Celular ou WhatsApp</label>
+            <input pattern="^\d{2}\d{5}\d{4}$" type="tel" name="Telefone ou Whatsapp" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX" oninvalid="this.setCustomValidity('Digite o DDD com 2 números e os 9 números do celular')" onkeyup="setCustomValidity('')"> 
+
+
+
+            <label for="mensagem">Mensagem</label>
+            <textarea type="mensagem" name="Mensagem" cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea>
+
+         
+            <fieldset class="prefere-contato">
+                <legend>Como prefere o nosso contato?</legend>
+                <label for="radio-email"><input type="radio" name="prefere-contato" value="email" id="radio-email">Email</label>
+
+
+                <label for="radio-telefone"><input type="radio" name="prefere-contato" value="telefone"
+                        id="radio-telefone">Telefone</label>
+
+
+                <label for="radio-whatsapp"><input type="radio" name="prefere-contato" value="whatsapp" 
+                    id="radio-whatsapp" checked>Whatsapp</label>
+            </fieldset>
+
+
+<!-- -->
+            <fieldset>
+                <legend>Qual horário prefere ser atendido?</legend>
+                <select>
+                    <option>Manhã</option>
+                    <option>Tarde</option>
+                    <option>Noite</option>
+                </select>
+            </fieldset>
+
+
+            <label class="checkbox"><input type="checkbox" name="Receber Novidades" checked> Gostaria de receber nossas novidades por
+                email?</label>
+
+            <input type="submit" value="Enviar formulário" class="enviar">
+        </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Segunda</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Terça</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Quinta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>8h ~ 20h</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </main>
+    <footer>
+        <img src="Logo-Dimas-branco.png" class="logo-rodape">
+        <p class="copyright">&copy; Copyright Barber Shop - 2022</p>
+    </footer>
+</body>
+
+</html>
