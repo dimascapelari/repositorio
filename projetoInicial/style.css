@@ -116,14 +116,35 @@ button {
 
 .mapa h3 {
   font-size: 25px;
+  color: rgb(0, 51, 153);
+  margin: 0 0 1em;
 }
 
 .mapa p {
   margin: 0 0 2em;
   text-align: center;
   font-weight: bold;
-  color: black;
+  color: rgb(0, 51, 153);
   font-size: 20px;
+  width: auto;
+}
+
+.sobre {
+  padding: 1em 0;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(0, 51, 153);
+  display: flex;
+  justify-content: center;
+}
+
+
+.sobre p {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(0, 51, 153);
+  font-size: 20px;
+  width: 70vw;
 }
 
 footer {
@@ -208,6 +229,10 @@ label {
 
 @media screen and (max-width: 900px) {
     
+  .caixa1, .caixa2 {
+    margin-bottom: 20px;
+  }
+  
   .mapa-conteudo {
     width: 400px;
   }
@@ -222,5 +247,10 @@ label {
 
   .linkmenu {
     font-size: 1.1rem;
+  }
+
+  .sobre p {
+    font-size: 18px;
+    
   }
 }
