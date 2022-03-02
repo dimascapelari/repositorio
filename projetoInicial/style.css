@@ -16,6 +16,7 @@
   background-color: rgb(0, 51, 153);
   align-items: center;
   height: 150px;
+  background: url("./images/blue-banner.jpg");
 }
 
 .logomenu img {
@@ -44,10 +45,10 @@
 .geral {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  min-width: 375px;
-  max-width: 1440px;
+  justify-content: center;
+  max-width: 1350px;
   margin-top: 50px;
+  
 }
 
 .geral img {
@@ -63,7 +64,7 @@
   border-radius: 10px;
   padding: 50px;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
-  
+  margin-inline: 20px;
 }
 
 
@@ -219,14 +220,13 @@ label {
   color: #FFFFFF;
 }
 
+
 footer {
   text-align: center;
   background: url("./images/rodape.png");
   padding: 50px 0 0px 0;
   background-size: 100% 100%;
 }
-
-
 
 
 :root {
