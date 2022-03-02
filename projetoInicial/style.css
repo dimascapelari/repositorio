@@ -45,10 +45,8 @@
 .geral {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1350px;
+  justify-content: space-evenly;
   margin-top: 50px;
-  
 }
 
 .geral img {
