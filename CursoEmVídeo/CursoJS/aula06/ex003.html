@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu primeiro programa...</title>
+  <style>
+    body {
+      background-color: rgb(155, 155, 204);
+      color: white;
+      font: normal 20pt Arial;
+    }
+
+    h1 {
+      color: rgb(255, 230, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Olá, mundo!</h1>
+  <p>Já me livrei da maldição</p>
+  <script>
+    //var n1 = Number.parseInt(window.prompt('Digite um número: ')) //String (parseInt para converter para número inteiro)
+    //var n2 = Number.parseFloat(window.prompt('Digite outro número: ')) //String (parseFloat para número fracionado exemplo 7.5)
+    //var s = n1 + n2
+    //window.alert('A soma dos valores é ' + s) //Concatenação
+    // (number + number) para adição
+    // (string + string) para concatenação
+
+    var n1 = Number(window.prompt('Digite um número: ')) //String (Number converte para a forma mais moderna e serve para todos os tipos de números... inteiros ou fracionados)
+    var n2 = Number(window.prompt('Digite outro número: ')) //String
+    var s = n1 + n2
+    window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`) //Método mais moderno do EcmaScript (template string) usar crase
+    // (number + number) para adição
+    // (string + string) para concatenação
+
+
+  </script>
+</body>
+
+</html>
