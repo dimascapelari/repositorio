@@ -11,32 +11,29 @@
 <body>
 
   <h1>Horário</h1>
-  <p>Digite a hora
-    <input type="text" name="hora" id="hora">
-    <input type="button" value="Verificar" onclick="horaatual()">
+  <p>Quer saber a hora?
+    <input type="text" name="hora" id="hora" disabled="disabled">
+    <input type="button" value="Clique Aqui!" onclick="horaatual()">
   </p>
   <div id="res">
 
   </div>
   <script>
     function horaatual() {
-
-      //var hora = document.querySelector('#hora')
-
-
+      var hora = document.querySelector('#hora')
       var agora = new Date()
-      var hora = agora.getHours()
-      hora.value = hora
-
+      var hor = agora.getHours() + ' horas' + ' e ' + agora.getMinutes() + ' minutos'
+      hora.value = hor
+      var hhh = agora.getHours()
       var res = document.querySelector('#res')
-      var ver = (hora.value)
-      if (ver <= 1 || ver < 6) {
+      //var res = (hora.value)
+      if (hhh <= 1 || hhh < 6) {
         res.innerHTML = `Boa madrugada!`
-      } else if (ver < 12) {
+      } else if (hhh < 12) {
         res.innerHTML = `Bom dia!`
-      } else if (ver <= 18) {
+      } else if (hhh <= 18) {
         res.innerHTML = `Boa tarde!`
-      } else if (ver <= 23) {
+      } else if (hhh <= 23) {
         res.innerHTML = `Boa noite!`
       }
 
