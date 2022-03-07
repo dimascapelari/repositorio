@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16pt Arial;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+.input {
+  padding: 20px;
+}
+
+.botao {
+  margin-left: 20px;
+  width: 150px;
+}
+
+input {
+  font: normal 12pt Arial;
+  width: 60px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+#res {
+  margin-top: 20px;
+}
+
+#final {
+  margin-top: 20px;
+}
