@@ -11,16 +11,20 @@
 </head>
 
 <body>
-  <h1>Notas Escolares</h1>
-  <p class="input">Primeiro Bimestre <input type="number" name="txtn1" id="txtn1"></p>
-  <p class="input">Segundo Bimestre <input type="number" name="txtn2" id="txtn2"></p>
-  <p class="input">Terceiro Bimestre <input type="number" name="txtn3" id="txtn3"></p>
-  <p class="input">Quarto Bimestre <input type="number" name="txtn4" id="txtn4"></p>
+  <section class="container">
+    <section>
+      <h1>Notas Escolares</h1>
+      <p>Nome do Aluno(a)<input type="text" name="nomealuno" id="nomealuno"></p>
+      Primeiro Bimestre<input type="number" name="txtn1" id="txtn1">
+      Segundo Bimestre <input type="number" name="txtn2" id="txtn2">
+      Terceiro Bimestre <input type="number" name="txtn3" id="txtn3">
+      Quarto Bimestre <input type="number" name="txtn4" id="txtn4">
 
-  <input class="botao" type="button" value="Somar" onclick="somar()">
-  <div id="res">Média anual</div>
-  <div id="final">Aprovado ou Reprovado?</div>
-
+      <input class="botao" type="button" value="Somar" onclick="somar()">
+      <div id="res">Média anual</div>
+      <div id="final">Aprovado ou Reprovado?</div>
+    </section>
+  </section>
   <script src="index.js"></script>
 </body>
 
