@@ -16,10 +16,19 @@ h1 {
   margin-bottom: 50px;
 }
 
+.nomemateria {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .botao {
   margin-left: 20px;
   width: 100px;
+}
+
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 input {
@@ -31,12 +40,53 @@ input {
   margin-right: 20px;
 }
 
-#nomealuno {
+#nomealuno, #nomeprof {
   width: 300px;
   text-align: left;
   margin-bottom: 10px;
 }
 
+#materia {
+  width: 200px;
+  text-align: left;
+}
+
 #res {
   margin-top: 15px;
+}
+
+@media screen and (max-width: 900px) {
+
+  #nomealuno {
+    margin-top: 30px;
+  }
+
+  #nomeprof {
+    width: 250px;
+  }
+
+  #materia {
+    margin-top: 5px;
+  }
+  
+  .inputs {
+    margin-right: 150px;
+  }
+
+  #txtn1 {
+    margin-left: 15px;
+  }
+  
+  #txtn2 {
+    margin-left: 10px;
+  }
+
+  #txtn3 {
+    margin-left: 17px;
+  }
+
+  #txtn4 {
+    margin-left: 25px;
+  }
+
 }
