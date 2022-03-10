@@ -1,14 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
+.header {
+  display: flex;
   width: auto;
   height: 80px;
-  background: rgb(1, 1, 209);
+  background: rgb(2, 2, 134);
   padding-left: 0;
+  align-items: center; 
+  
+}
+
+.header h1 {
+  font-size: 55px;
+  margin-left: 50px;
+  color: white;
+  font-family: 'Syne Mono', monospace;
+}
+
+.header h2 {
+  color: white;
+  margin-left: auto;
+  margin-right: 50px;
+  font-family: 'Syne Mono', monospace;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  margin-left: 10px;
 }
 
 body {
@@ -64,6 +89,12 @@ input {
   margin-top: 15px;
 }
 
+.rodape {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .footer {
   display: flex;
   justify-content: center;
@@ -80,11 +111,27 @@ input {
 
 footer {
   text-align: center;
-  background: rgb(1, 1, 209);
+  background: rgb(2, 2, 134);
   color: white;
 }
 
 @media screen and (max-width: 900px) {
+
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .header h2 {
+   font-size: 20px;
+   margin-left: 30px;
+ }
+
+  .logo {
+   height: 40px;
+   width: auto;
+   margin-left: 10px;
+ }
+
 
   #nomealuno {
     margin-top: 30px;
