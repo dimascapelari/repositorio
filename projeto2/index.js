@@ -6,6 +6,7 @@ function somar() {
   var tn3 = document.getElementById('txtn3')
   var tn4 = document.querySelector('#txtn4')
   var res = document.getElementById('res')
+  var valorerrado = document.getElementById('valorerrado')
   var n1 = Number(tn1.value)
   var n2 = Number(tn2.value)
   var n3 = Number(tn3.value)
@@ -21,6 +22,6 @@ function somar() {
     final.innerHTML = `<p style="color:#0000FF;">${nomealuno} está <strong>APROVADO</strong> em ${materia}!</p>`
   } else if (soma < 24) {
     final.innerHTML = `<p style="color:#FF0000;">${nomealuno} está <strong>REPROVADO</strong> em ${materia}!</p>`
-  }
+  } 
   
 }

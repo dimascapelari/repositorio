@@ -19,22 +19,25 @@
   <section class="container">
     <section>
       <h1>Boletim Escolar 2022</h1>
-      <section class="nomemateria">
-        <p>Nome do Professor(a)<input type="text" name="nomeprof" id="nomeprof"></p>
-        <p>Matéria <input type="text" name="materia" id="materia"></p>
-      </section>
-      <p class="nomealuno">Nome do Aluno(a)<input type="text" name="nomealuno" id="nomealuno"></p>
-      <section class="inputs">
-        Primeiro Bimestre<input type="number" name="txtn1" id="txtn1">
-        Segundo Bimestre <input type="number" name="txtn2" id="txtn2">
-        Terceiro Bimestre <input type="number" name="txtn3" id="txtn3">
-        Quarto Bimestre <input type="number" name="txtn4" id="txtn4">
+      <form>
+        <section class="nomemateria">
+          <p>Nome do Professor(a)<input type="text" name="nomeprof" id="nomeprof"></p>
+          <p>Matéria <input type="text" name="materia" id="materia"></p>
+        </section>
+        <p class="nomealuno">Nome do Aluno(a)<input type="text" name="nomealuno" id="nomealuno"></p>
+        <section class="inputs">
+          Primeiro Bimestre<input type="number" name="txtn1" id="txtn1" min="0" max="10">
+          Segundo Bimestre <input type="number" name="txtn2" id="txtn2" min="0" max="10">
+          Terceiro Bimestre <input type="number" name="txtn3" id="txtn3" min="0" max="10">
+          Quarto Bimestre <input type="number" name="txtn4" id="txtn4" min="0" max="10">
 
-        <input class="botao" type="button" value="Somar" onclick="somar()">
-      </section>
-      <div id="res">Média anual</div>
-      <div id="final">Aprovado ou Reprovado?</div>
+          <input class="botao" type="button" value="Somar" onclick="somar()">
+      </form>
     </section>
+
+    <div id="res">Média anual</div>
+    <div id="final">Aprovado ou Reprovado?</div>
+  </section>
   </section>
 
   <section class="rodape">
