@@ -7,11 +7,11 @@ function somar() {
   var tn3 = document.getElementById('txtn3')
   var tn4 = document.querySelector('#txtn4')
   var res = document.getElementById('res')
-  var n1 = Number(tn1.value)
-  var n2 = Number(tn2.value)
-  var n3 = Number(tn3.value)
-  var n4 = Number(tn4.value)
-  var soma = n1 + n2 + n3 + n4
+  var n1 = (tn1.value)
+  var n2 = (tn2.value)
+  var n3 = (tn3.value)
+  var n4 = (tn4.value)
+  var soma = +n1 + +n2 + +n3 + +n4
   var nomeprof = (prof.value)
   var materia = (mat.value)
   var nomealuno = (nome.value)
@@ -23,7 +23,7 @@ function somar() {
     alert("Preencha o Nome da Matéria!")
   } else if(nomealuno == "") {
     alert("Preencha o Nome do Aluno!")
-  } else if(n1 == "" || n2 == "" || n3 == "" || n4 == ""){
+  } else if(n1 === "" || n2 === "" || n3 === "" || n4 === ""){
     alert("Insira as notas corretamente (entre 0 e 10)")
   }
   
