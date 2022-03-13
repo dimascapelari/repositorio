@@ -16,5 +16,14 @@ function listarFilmesNaTela(filmeFavorito) {
 }
 
 
+let del = document.getElementById('listaFilmes')
+del.addEventListener('click', clicar)
+
+
+function clicar() {
+  
+ del.innerText = ''
+  
+}
 
 //<img src="imagem.gif" onclick="this.parentNode.removeChild(this)"></img>
