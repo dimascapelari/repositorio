@@ -10,8 +10,11 @@ function adicionarFilme() {
 }
 
 function listarFilmesNaTela(filmeFavorito) {
-  var elementoFilmeFavorito = "<img src=" + filmeFavorito + ">";
+  var elementoFilmeFavorito = `<img src= ${filmeFavorito}>`;
   var elementoListaFilmes = document.getElementById("listaFilmes");
-  elementoListaFilmes.innerHTML =
-    elementoListaFilmes.innerHTML + elementoFilmeFavorito;
+  elementoListaFilmes.innerHTML = elementoListaFilmes.innerHTML + elementoFilmeFavorito;
 }
+
+
+
+//<img src="imagem.gif" onclick="this.parentNode.removeChild(this)"></img>
