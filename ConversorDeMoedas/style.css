@@ -5,10 +5,17 @@
   box-sizing: border-box;
 }
 
+body {
+  background: #2c2c2c;
+}
+
 #cabecalho {
   background: #9657A5;
   width: 375px;
   height: 66px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
 }
 
 h1 {
@@ -22,6 +29,9 @@ h1 {
   background: #E5E5E5;
   width: 375px;
   padding: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
 }
 
 .paragrafo {
@@ -45,4 +55,60 @@ h1 {
   padding-left: 16px;
   font-size: 16px;
   font-weight: bold;
+}
+
+#input {
+  height: 48px;
+  width: 327px;
+  background: #FFFFFF;
+  border: 1px solid #BBBBBB;
+  border-radius: 4px;
+  margin-bottom: 23px;
+  outline: none;
+  padding-left: 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#botao {
+  background: #CDD728;
+  border-radius: 25px;
+  display: block;
+  width: 327px;
+  height: 48px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 23px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #FFFFFF;
+  outline: none;
+}
+
+#botao:active {
+opacity: 0.6;
+}
+
+#caixa-interna {
+  border: 1px solid #9657A5;
+  border-radius: 4px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.caixa-menor{
+  text-align: center;
+}
+
+#seta {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.paragrafo-negrito {
+  font-weight: bold;
+  font-size: 20px;
 }
