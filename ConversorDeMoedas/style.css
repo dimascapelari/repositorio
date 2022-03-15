@@ -31,3 +31,18 @@ h1 {
   font-size: 14px;
   line-height: 18px;
 }
+
+.select {
+  background: #FFFFFF;
+  border: 1px solid #BBBBBB;
+  border-radius: 4px;
+  height: 48px;
+  width: 327px;
+  margin-bottom: 23px;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  padding-left: 16px;
+  font-size: 16px;
+  font-weight: bold;
+}
