@@ -17,3 +17,17 @@ h1 {
   text-align: center;
   padding-top: 20px;
 }
+
+#caixa-principal {
+  background: #E5E5E5;
+  width: 375px;
+  padding: 24px;
+}
+
+.paragrafo {
+  margin-bottom: 6px;
+  color: #777777;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
