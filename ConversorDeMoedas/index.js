@@ -1,8 +1,7 @@
 
 
-var input = document.getElementById("input").value
+let input = document.getElementById("input").value
+let botao = document.getElementById("botao")
 
-console.log(input)
-
-console.log('Olá Mundo!')
-console.log("me livrei da maldição...")
+botao.addEventListener()
+console.log(botao)
