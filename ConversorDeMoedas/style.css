@@ -31,7 +31,7 @@ h1 {
   padding: 24px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .paragrafo {
@@ -113,4 +113,29 @@ opacity: 0.6;
 .paragrafo-negrito {
   font-weight: bold;
   font-size: 20px;
+}
+
+.rodape {
+  position: absolute;
+  bottom: auto;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 375px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.copyright {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+footer {
+  text-align: center;
 }
