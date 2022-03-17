@@ -7,30 +7,37 @@ let select = document.getElementById("select-modedas")
 
 
 
-function converterMoedas(){
+function converterMoedas() {
   let inputValorEmReais = Number(document.getElementById("input").value)
   let inputMoedas = document.getElementById("input-moedas")
   let textoReal = document.getElementById("texto-real")
 
-  let valorEmDolares = inputValorEmReais / dolar
-  
-  inputMoedas.innerHTML = valorEmDolares.toLocaleString('en-US',{style: 'currency', currency: 'USD'})
-  textoReal.innerHTML = inputValorEmReais.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
-  
+  if (select.value === "US$ Dólar Americano") {
+    let valorEmDolares = inputValorEmReais / dolar
+    inputMoedas.innerHTML = valorEmDolares.toLocaleString('en-US', { style: 'currency', currency: 'USD' })
+  }
+
+  if (select.value === "€ Euro") {
+    let valorEmEuros = inputValorEmReais / euro
+    inputMoedas.innerHTML = valorEmEuros.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })
+  }
+
+  textoReal.innerHTML = inputValorEmReais.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
 }
 
-function trocaDeMoeda(){
+function trocaDeMoeda() {
   let textoMoedas = document.getElementById("texto-moedas")
   let bandeiraMoedas = document.getElementById("bandeira-moedas")
-  
-  if(select.value === "US$ Dólar Americano"){
-  textoMoedas.innerHTML = "Dólar Americano"
-  bandeiraMoedas.src = "./img/eua.png"
-}
-    if(select.value === "€ Euro"){
+
+  if (select.value === "US$ Dólar Americano") {
+    textoMoedas.innerHTML = "Dólar Americano"
+    bandeiraMoedas.src = "./img/eua.png"
+  }
+  if (select.value === "€ Euro") {
     textoMoedas.innerHTML = "Euro"
     bandeiraMoedas.src = "./img/euro.png"
   }
+  converterMoedas()
 }
 
 botao.addEventListener("click", converterMoedas)
