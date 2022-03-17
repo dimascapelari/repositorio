@@ -1,8 +1,9 @@
 
 
 let dolar = 5.3
+let euro = 6
 let botao = document.getElementById("botao")
-
+let select = document.getElementById("select-modedas")
 
 
 
@@ -18,7 +19,12 @@ function converterMoedas(){
   
 }
 
+function trocaDeMoeda(){
+  console.log('Trocou a moeda')
+}
+
 botao.addEventListener("click", converterMoedas)
+select.addEventListener("change", trocaDeMoeda)
 
 
 
