@@ -21,12 +21,16 @@ function converterMoedas(){
 
 function trocaDeMoeda(){
   let textoMoedas = document.getElementById("texto-moedas")
-
-  if(select.value === "US$ Dólar Americano")
+  let bandeiraMoedas = document.getElementById("bandeira-moedas")
+  
+  if(select.value === "US$ Dólar Americano"){
   textoMoedas.innerHTML = "Dólar Americano"
-
-    if(select.value === "€ Euro")
+  bandeiraMoedas.src = "./img/eua.png"
+}
+    if(select.value === "€ Euro"){
     textoMoedas.innerHTML = "Euro"
+    bandeiraMoedas.src = "./img/euro.png"
+  }
 }
 
 botao.addEventListener("click", converterMoedas)
