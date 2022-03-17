@@ -10,17 +10,23 @@ let select = document.getElementById("select-modedas")
 function converterMoedas(){
   let inputValorEmReais = Number(document.getElementById("input").value)
   let inputMoedas = document.getElementById("input-moedas")
-  let inputReal = document.getElementById("input-real")
+  let textoReal = document.getElementById("texto-real")
 
   let valorEmDolares = inputValorEmReais / dolar
   
   inputMoedas.innerHTML = valorEmDolares.toLocaleString('en-US',{style: 'currency', currency: 'USD'})
-  inputReal.innerHTML = inputValorEmReais.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+  textoReal.innerHTML = inputValorEmReais.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
   
 }
 
 function trocaDeMoeda(){
-  console.log('Trocou a moeda')
+  let textoMoedas = document.getElementById("texto-moedas")
+
+  if(select.value === "US$ Dólar Americano")
+  textoMoedas.innerHTML = "Dólar Americano"
+
+    if(select.value === "€ Euro")
+    textoMoedas.innerHTML = "Euro"
 }
 
 botao.addEventListener("click", converterMoedas)
