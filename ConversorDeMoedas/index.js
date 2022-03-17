@@ -2,7 +2,7 @@
 //let dolar = 5.3
 //let euro = 6
 let botao = document.getElementById("botao")
-let select = document.getElementById("select-modedas")
+let select = document.getElementById("select-moedas")
 
 // await fica aguardando carregar informação do servidor e é preciso colocar async na function = função Assíncrona para esperar responder.
 // .then espera retornar do servidor para seguir a função.
