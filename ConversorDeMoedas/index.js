@@ -7,13 +7,14 @@ let botao = document.getElementById("botao")
 
 
 function converterMoedas(){
-  let inputValorEmReais = document.getElementById("input").value
+  let inputValorEmReais = Number(document.getElementById("input").value)
   let inputMoedas = document.getElementById("input-moedas")
-  
+  let inputReal = document.getElementById("input-real")
+
   let valorEmDolares = inputValorEmReais / dolar
   
   inputMoedas.innerHTML = valorEmDolares.toLocaleString('en-US',{style: 'currency', currency: 'USD'})
-
+  inputReal.innerHTML = inputValorEmReais.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
   
 }
 
