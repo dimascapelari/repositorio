@@ -1,11 +1,6 @@
-
-//let dolar = 5.3
-//let euro = 6
 let botao = document.getElementById("botao")
 let select = document.getElementById("select-moedas")
 
-// await fica aguardando carregar informação do servidor e é preciso colocar async na function = função Assíncrona para esperar responder.
-// .then espera retornar do servidor para seguir a função.
 async function converterMoedas() {
 
   let moedas = await fetch("https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL").then(function (respota) {
@@ -14,9 +9,6 @@ async function converterMoedas() {
 
   let dolar = moedas.USDBRL.high
   let euro = moedas.EURBRL.high
-  //console.log(dolar)
-  //console.log(euro)
-
   let inputValorEmReais = Number(document.getElementById("input").value) //.replace('.', "")
   let inputMoedas = document.getElementById("input-moedas")
   let textoReal = document.getElementById("texto-real")
@@ -34,7 +26,6 @@ async function converterMoedas() {
   textoReal.innerHTML = inputValorEmReais.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
 }
 
-// Essa função troca as bandeiras e nome das moedas
 function trocaDeMoeda() {
   let textoMoedas = document.getElementById("texto-moedas")
   let bandeiraMoedas = document.getElementById("bandeira-moedas")
@@ -50,9 +41,5 @@ function trocaDeMoeda() {
   converterMoedas()
 }
 
-botao.addEventListener("click", converterMoedas)// click fica escutando o olick do botao
-select.addEventListener("change", trocaDeMoeda)// change = é quando seleciona o item no input  
-
-
-
-// console.log(valorEmDolares.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
+botao.addEventListener("click", converterMoedas)
+select.addEventListener("change", trocaDeMoeda)
