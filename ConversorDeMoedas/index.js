@@ -17,7 +17,7 @@ async function converterMoedas() {
   //console.log(dolar)
   //console.log(euro)
 
-  let inputValorEmReais = Number(document.getElementById("input").value)
+  let inputValorEmReais = Number(document.getElementById("input").value) //.replace('.', "")
   let inputMoedas = document.getElementById("input-moedas")
   let textoReal = document.getElementById("texto-real")
 
