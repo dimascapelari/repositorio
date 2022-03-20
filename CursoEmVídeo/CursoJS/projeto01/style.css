@@ -1,17 +1,12 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 body {
 background: cornflowerblue;
 font: Normal 15pt Arial;
-
 }
 
 header {
   color: white;
+  text-align: center;
 }
 
 section {
@@ -24,4 +19,6 @@ margin: auto;
 
 footer {
 color: white;
+text-align: center;
+font-style: italic;
 }
