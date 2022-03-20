@@ -14,6 +14,7 @@ background: white;
 border-radius: 10px;
 padding: 15px;
 width: 500px;
+height: 400px;
 margin: auto;
 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
 }
@@ -23,8 +24,25 @@ div {
   padding: 8px;
 }
 
+#msg, #saudacao {
+  font-size: 25px
+}
+
 footer {
 color: white;
 text-align: center;
 font-style: italic;
+font-size: 16px;
+margin-top: 30px;
+}
+
+@media screen and (max-width: 900px) {
+    
+  section {
+    width: 320px;
+  }
+
+  #msg, #saudacao {
+    font-size: 20px
+  }
 }
