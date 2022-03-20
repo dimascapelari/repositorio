@@ -4,29 +4,7 @@
   box-sizing: border-box;
 }
 
-.container-principal {
-  display: flex;
-  justify-content: center;
-  
-    
-}
-
-.container {
-  text-align: center;
-  background: cornflowerblue;
-  width: 800px;
-  height: 600px;
-    
-}
 
 h1 {
-  margin-top: 50px;
-  font-size: 40px;
-}
-
-.quadro {
-  background-color: white;
-  width: 350px;
-  height: 300px;
-  margin: 50px auto auto auto;
+  
 }
