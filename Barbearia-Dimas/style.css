@@ -221,6 +221,8 @@ td, th {
 .mapa-conteudo {
     width: 940px;
     margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .mapa p {
