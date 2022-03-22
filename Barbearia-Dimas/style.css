@@ -17,7 +17,6 @@ header {
     margin: 27px;
 }
 
-
 nav {
     position: absolute;
     top: 110px;
@@ -42,13 +41,11 @@ nav a:hover {
     text-decoration: none;
 }
 
-
-
 .container {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 50px 0;
+    padding: 50px 0 60px;
 }
 
 .cabelo, .barba, .cabelobarba {
@@ -116,7 +113,6 @@ footer {
     margin: 20px 0 0;
 }
 
-
 form {
     margin: 60px;
 }
@@ -134,7 +130,6 @@ form label, form legend {
     width: 30%;
 }
 
-
 /* Campo de testes dos input*/
 
 input:focus:required:invalid {
@@ -147,7 +142,6 @@ input:required:valid {
   
  /* Campo de testes dos input*/
  
-
 .checkbox {
     margin: 40px 0;
 }
