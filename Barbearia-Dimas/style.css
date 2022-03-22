@@ -9,7 +9,7 @@ header {
 
 .caixa {
     position: relative;
-    width: 940px;
+    width: 1200px;
     margin: 0 auto;
 }
 .logo-cabecalho {
@@ -308,6 +308,7 @@ td, th {
 
     nav {
         position: static;
+        text-align: center;
     }
 
     .lista-beneficios, .imagem-beneficios {
