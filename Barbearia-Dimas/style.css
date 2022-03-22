@@ -322,5 +322,9 @@ td, th {
     .produtos li {
         padding: 15px;
     }
+
+    .container {
+        padding-bottom: 30px;
+    }
     
 }
