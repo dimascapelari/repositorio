@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background: coral;
+  width: 100%;
+  height: 100px;
+}
+
+header h1 {
+  font-size: 30px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  background: blue;
+  width: 100%;
+  height: 600px;
+}
+
+.imagem {
+  width: 500px;
+  height: auto;
+  background: chartreuse;
+  background-image: url('./img/convite.png');
+  background-size: 100%; 
+  background-repeat: no-repeat;
+}
+
+.imagem h2 {
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.texto {
+  width: 500px;
+  height: auto;
+  background: burlywood;
+}
