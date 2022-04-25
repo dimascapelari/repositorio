@@ -20,29 +20,31 @@ sintaxe de array -->
   (crie classe CSS de exemplo). -->
   <h2>#03</h2>
   <div>
-    <input type="text">
-    <div></div>
+    <input type="text" v-model="classe3">
+    <div :class="classe3"></div>
   </div>
   <!-- 4) Aplique na div abaixo a classe informada pelo usuário e
   outra classe usando o valor true/false (crie classes CSS de exemplo). -->
   <h2>#04</h2>
   <div>
-    <input type="text">
-    <input type="text">
-    <div></div>
+    <input type="text" v-model="classe4">
+    <input type="text" @input="setPerigo">
+    <div :class="[classe4, {perigo}]"></div>
   </div>
   <!-- 5) Repita 3) mas utilizando estilos ao invés de classes CSS.
   Associe os estilos a div abaixo -->
   <h2>#05</h2>
   <div>
-    <input type="text">
-    <div></div>
+    <input type="text" v-model="cor5">
+    <div :style="[estilo5, {backgroundColor: cor5}]"></div>
   </div>
   <!-- 6) Crie uma barra de progresso simples com setInterval e binding de estilo. -->
   <h2>#06</h2>
   <div>
     <button @click="iniciarProgresso">Iniciar</button>
-    <div></div>
+    <div class="barra-progresso">
+      <div class="progresso" :style="{width}"></div>
+    </div>
   </div>
 </div>
 <script src="app.js"></script>
