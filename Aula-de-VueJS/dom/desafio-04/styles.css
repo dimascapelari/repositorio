@@ -13,3 +13,16 @@
   background-color: gray;
   width: 50px !important;
 }
+
+.perigo {
+  background-color: red;
+}
+
+.quadrado {
+  width: 100px;
+  height: 100px;
+}
+
+.direita {
+  float: right;
+}

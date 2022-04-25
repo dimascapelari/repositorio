@@ -10,12 +10,12 @@ associar as classes CSS. -->
   <h2>#01</h2>
   <div>
     <button @click="iniciarEfeito">Iniciar Efeito</button>
-    <div id="efeito"></div>
+    <div id="efeito" :class="classe1"></div>
   </div>
   <!-- 2) Crie duas classes CSS e associe a div usando a
 sintaxe de array -->
   <h2>#02</h2>
-  <div>Estou sem classe CSS :(</div>
+  <div :class="[{perigo}, 'quadrado']">Estou sem classe CSS :(</div>
   <!-- 3) Aplique na div abaixo a classe informada pelo usuário
   (crie classe CSS de exemplo). -->
   <h2>#03</h2>
