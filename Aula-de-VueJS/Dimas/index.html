@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimas Vue.JS</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1>{{ titulo }}</h1>
+    <p>{{ p1 }}</p>
+    <h2>{{ titulo2 }}</h2>
+    <h3>{{ saudacao() }}</h3>
+    <h4>{{ saudacao2() }}</h4>
+    <a :href="link">Google</a>
+    <h5>{{ sauda3 }}</h5>
+    <hr>
+    <p v-html="linkHtml"></p>
+
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        titulo: 'Consegui!',
+        p1: 'teste',
+        titulo2: 'teste2',
+        link: 'http://google.com.br',
+        sauda3: 'oi',
+        linkHtml: '<a href="https://www.uol.com.br">UOL</a>'
+      },
+      methods: {
+        saudacao() {
+          return 'Teste 1 do Methods!'
+        },
+        saudacao2() {
+          return 'Teste 2 do Methods!'
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
