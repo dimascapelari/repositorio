@@ -7,18 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dimas Vue.JS</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-  <style>
-    .barra-progresso {
-      height: 30px;
-      width: 500px;
-      border: 1px solid #000;
-    }
-
-    .progresso {
-      background-color: red;
-      height: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -46,62 +35,7 @@
       </div>
     </div>
 
-    <script>
-      new Vue({
-        el: '#app',
-        data: {
-          titulo: 'Consegui!',
-          p1: 'teste',
-          titulo2: 'teste2',
-          link: 'http://google.com.br',
-          sauda3: 'oi',
-          linkHtml: '<a href="https://www.uol.com.br">UOL</a>',
-          contador: 0,
-          width: '0',
-        },
-
-        computed: {
-          resultado() {
-            return this.contador >= 5 ?
-              'Maior ou igual a 5' : 'Menor que 5'
-          }
-        },
-        watch: {
-          contador(novo, antigo) {
-            setTimeout(() => {
-              this.contador = 0
-            }, 2000)
-          },
-          titulo() {
-            setTimeout(() => {
-              this.titulo = 'Consegui de novo!'
-            }, 2000)
-          }
-        },
-        methods: {
-          saudacao() {
-            return 'Teste 1 do Methods!'
-          },
-          saudacao2() {
-            return 'Teste 2 do Methods!'
-          },
-          aumentar() {
-            this.contador++
-          },
-          diminuir() {
-            this.contador--
-          },
-          iniciarProgresso() {
-            let valor = 0
-            const temporizador = setInterval(() => {
-              valor += 5
-              this.width = `${valor}%`
-              if (valor == 100) clearInterval(temporizador)
-            }, 120)
-          },
-        }
-      })
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
