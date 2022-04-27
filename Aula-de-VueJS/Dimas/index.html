@@ -21,6 +21,11 @@
     <hr>
     <p v-html="linkHtml"></p>
     <input type="text" v-model="titulo">
+    <hr>
+    <button v-on:click="aumentar">Aumentar</button>
+    <button v-on:click="diminuir">Diminuir</button>
+    <p>Contador: {{ contador }}</p>
+    <p>Resultado: {{ resultado }}</p>
   </div>
 
   <script>
@@ -32,7 +37,14 @@
         titulo2: 'teste2',
         link: 'http://google.com.br',
         sauda3: 'oi',
-        linkHtml: '<a href="https://www.uol.com.br">UOL</a>'
+        linkHtml: '<a href="https://www.uol.com.br">UOL</a>',
+        contador: 0,
+      },
+      computed: {
+        resultado() {
+          return this.contador >= 5 ?
+            'Maior ou igual a 5' : 'Menor que 5'
+        }
       },
       methods: {
         saudacao() {
@@ -40,7 +52,13 @@
         },
         saudacao2() {
           return 'Teste 2 do Methods!'
-        }
+        },
+        aumentar() {
+          this.contador++
+        },
+        diminuir() {
+          this.contador--
+        },
       }
     })
   </script>
