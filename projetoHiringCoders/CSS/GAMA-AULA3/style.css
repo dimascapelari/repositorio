@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+}
+
+#login {
+  background-color: black;
+  color: white;
+}
+
+#registre {
+  background-color: blue;
+  color: white;
+}
+
+.copy {
+  font-size: 8px;
+}

@@ -1,0 +1,12 @@
+body {
+  color: red;
+}
+
+li {
+  text-decoration: underline;
+  color: black;
+}
+
+ul {
+  border: 1px solid black;
+}
