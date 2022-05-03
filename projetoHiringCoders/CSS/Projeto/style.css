@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   color: #a09038;
+  font-family: 'Poppins', sans-serif;
 }
 
 header img {
@@ -12,6 +13,8 @@ header img {
 
 ul {
   list-style: none;
+  font-style: italic;
+  font-weight: 700;
 }
 
 a {
@@ -26,5 +29,16 @@ body {
   background-position: center center fixed;
   background-size: cover;*/
   background: linear-gradient(90deg, #003fa3, #02ccff);
-  
+}
+
+.container {
+  text-align: center;
+}
+
+.container .name h1 {
+  font-size: 60px;
+}
+
+.container .name h5 {
+  font-size: 25px;
 }
