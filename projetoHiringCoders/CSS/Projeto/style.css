@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #a09038;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  /*background-image: url(./img/pexels-johannes-plenio-1103970.jpg);*/
+  /*background-image: url(./img/pexels-mikhail-nilov-7709020.jpg);*/
+  /*background-image: url(./img/tecnologia.jpg);
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  background-size: cover;*/
+  background: linear-gradient(90deg, #003fa3, #02ccff);
+  
+}
