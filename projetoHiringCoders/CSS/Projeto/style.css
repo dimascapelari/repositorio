@@ -28,7 +28,7 @@ body {
   background-repeat: no-repeat;
   background-position: center center fixed;
   background-size: cover;*/
-  background: linear-gradient(90deg, #003fa3, #02ccff);
+  background: linear-gradient(90deg, #002155, #02ccff);
 }
 
 .container {
@@ -41,4 +41,22 @@ body {
 
 .container .name h5 {
   font-size: 25px;
+}
+
+#about p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.form input {
+  width: 50%;
+}
+
+.form button {
+  width: 15%;
 }
