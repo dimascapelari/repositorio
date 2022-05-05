@@ -31,6 +31,22 @@ body {
   background: linear-gradient(90deg, #100570, #012731);
 }
 
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+header ul {
+  display: flex;
+}
+
+
+header ul li {
+  padding: 10px;
+}
+
 .container {
   text-align: center;
 }
