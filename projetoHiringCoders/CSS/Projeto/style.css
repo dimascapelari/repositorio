@@ -36,15 +36,22 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 10px;
+  /*border-bottom: 2px solid #fff;*/
+  /*box-shadow: 1px 1px 10px 1px #fff;*/
+  /*border-bottom: 15px ridge #fff;*/
 }
 
 header ul {
   display: flex;
 }
 
-
 header ul li {
   padding: 10px;
+  /*border-right: 2px dashed #fff;*/
+}
+
+header ul li:first-child {
+  /*border-left: 2px dashed #fff;*/
 }
 
 .container {
@@ -67,6 +74,8 @@ header ul li {
 .form {
   width: 40%;
   margin: 0 auto;
+  border: thick double #fff;
+  padding: 25px;
 }
 
 .form input {
