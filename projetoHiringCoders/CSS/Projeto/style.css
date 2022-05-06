@@ -37,7 +37,7 @@ header {
   align-items: center;
   padding: 10px;
   /*border-bottom: 2px solid #fff;*/
-  /*box-shadow: 1px 1px 10px 1px #fff;*/
+  box-shadow: 1px 1px 10px 1px #fff;
   /*border-bottom: 15px ridge #fff;*/
 }
 
@@ -48,6 +48,15 @@ header ul {
 header ul li {
   padding: 10px;
   /*border-right: 2px dashed #fff;*/
+}
+
+header ul li a {
+  transition: 300ms;
+}
+
+header ul li a:hover {
+  color: #c0a717;
+  text-decoration: underline;
 }
 
 header ul li:first-child {
@@ -66,6 +75,31 @@ header ul li:first-child {
   font-size: 25px;
 }
 
+#arrow {
+  font-size: 30px;
+  cursor: pointer;
+  animation: piscar 1s steps(5, start) infinite;
+}
+
+@keyframes piscar {
+  to {
+    visibility: hidden;
+  }
+}
+
+#animation {
+  transition: 300ms;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: 300ms;
+}
+
+.active {
+  display: block !important;
+}
+
 #about p {
   max-width: 600px;
   margin: 0 auto;
@@ -74,14 +108,34 @@ header ul li:first-child {
 .form {
   width: 40%;
   margin: 0 auto;
-  border: thick double #fff;
-  padding: 25px;
+  /*border: thick double #fff;
+  padding: 25px;*/
 }
 
 .form input {
   width: 50%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
 }
 
 .form button {
   width: 15%;
+  padding: 5px 10px;
+  /*background-color: #c0a717;*/
+  background: linear-gradient(to right, #c0a717 50%, #9c551b 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: #FFF;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease-out;
+  border-radius: 0px 5px 5px 0px;
+  margin-top: 20px;
+  margin-left: -5px;
+}
+
+.form button:hover {
+  background-position: left bottom;
 }

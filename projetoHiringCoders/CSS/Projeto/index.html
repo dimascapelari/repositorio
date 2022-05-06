@@ -1,63 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b8765e35d0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Dimas Capelari</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/b8765e35d0.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
-    rel="stylesheet">
-  <title>Dimas Capelari</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <header>
-    <div>
-      <img src="./img/robo-topo.png" alt="Logo">
-    </div>
-    <ul>
-      <li>
-        <a target="_blank" href="https://www.linkedin.com/in/dimas-capelari">linkedin</a>
-      </li>
-      <li>
-        <a target="_blank" href="https://www.github.com/dimascapelari">github</a>
-      </li>
-      <li>
-        <a target="_blank" href="https://wa.me/5519997075772">whatsapp</a>
-        <!-- <a href="https://api.whatsapp.com/send/?phone=5519997075772&text&app_absent=0">whatsapp</a> -->
-      </li>
-    </ul>
-  </header>
-  <main>
-    <section class="container">
-      <div class="name">
-        <h1>Dimas Capelari</h1>
-        <h5>Front-End Developer</h5>
+  <body>
+    <header>
+      <div>
+        <img src="./img/robo-topo.png" alt="Logo" />
       </div>
-      <div id="arrow"></div>
-      <i class="fa-solid fa-circle-arrow-down"></i>
-      <!-- <i class="fa-solid fa-circle-arrow-up"></i> -->
-
-      <div id="about">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, laudantium perspiciatis sit quis tempore
-          illum repellendus quas voluptas vitae maxime provident enim eos, voluptatibus quod ex suscipit inventore.</p>
-      </div>
-
-      <div class="form">
-        <div>
-          <p>deixe seu contato!</p>
+      <ul>
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/dimas-capelari"
+            >linkedin</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://www.github.com/dimascapelari"
+            >github</a
+          >
+        </li>
+        <li>
+          <a target="_blank" href="https://wa.me/5519997075772">whatsapp</a>
+          <!-- <a href="https://api.whatsapp.com/send/?phone=5519997075772&text&app_absent=0">whatsapp</a> -->
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section class="container">
+        <div class="name">
+          <h1>Dimas Capelari</h1>
+          <h5>Front-End Developer</h5>
         </div>
-        <form action="">
-          <input type="text" placeholder=" seu melhor email :)">
-          <button>enviar!</button>
-        </form>
-      </div>
-    </section>
-  </main>
-</body>
+        <div onclick="displayAbout()" id="arrow">
+          <i id="animation" class="fa-solid fa-circle-arrow-down"></i>
+          <!-- <i class="fa-solid fa-circle-arrow-up"></i> -->
+        </div>
+        <div style="display: none" id="about">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci,
+            laudantium perspiciatis sit quis tempore illum repellendus quas
+            voluptas vitae maxime provident enim eos, voluptatibus quod ex
+            suscipit inventore.
+          </p>
+        </div>
 
+        <div class="form">
+          <div>
+            <p>deixe seu contato!</p>
+          </div>
+          <form action="">
+            <input type="text" placeholder=" seu melhor email :)" />
+            <button>enviar!</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script>
+      function displayAbout() {
+        var arrow = document.getElementById("animation");
+        arrow.classList.toggle("rotate");
+
+        var display = document.getElementById("about");
+        display.classList.toggle("active");
+      }
+    </script>
+  </body>
 </html>
