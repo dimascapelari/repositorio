@@ -10,5 +10,5 @@ function busca(num) {
 }
 
 // usando a nossa ferramenta de busca
-console.log(busca(10));
+console.log(busca(22));
 console.log(busca(50));
