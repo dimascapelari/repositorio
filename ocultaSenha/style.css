@@ -79,3 +79,12 @@ input[type=text]+button::after {
     transform: rotate(45deg);
     transition: height .200s;
 }
+
+footer {
+    position: absolute;
+    margin-top: 500px;
+    color: #e0e0e0;
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+}
