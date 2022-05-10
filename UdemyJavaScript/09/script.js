@@ -1,0 +1,5 @@
+var mensagem = document.getElementById('mensagem')
+var p = document.querySelector('#mensagem p')
+// mensagem.removeChild(p)
+// p.parentNode.removeChild(p)
+p.remove()
