@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #212121;
+}
+
+password {
+    width: 300px;
+    height: 50px;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    outline: 0;
+    font-size: 32px;
+}
+
+button {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color: #424242;
+    cursor: pointer;
+}
+
+button::before,
+button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+input[type=password]+button::before {
+    width: 20px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 15px 0;
+    transform: rotate(45deg);
+    transition: height .200s;
+}
+
+input[type=password]+button::after {
+    width: 10px;
+    height: 10px;
+    background-color: #424242;
+    border-radius: 50%;
+}
+
+input[type=text]+button::before {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #e0e0e0;
+    background-color: transparent;
+    border-radius: 15px 0;
+    transform: rotate(45deg);
+}
+
+input[type=text]+button::after {
+    width: 3px;
+    height: 30px;
+    background-color: #e0e0e0;
+    transform: rotate(45deg);
+    transition: height .200s;
+}
