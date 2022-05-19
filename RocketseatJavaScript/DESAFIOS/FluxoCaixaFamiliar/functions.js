@@ -38,7 +38,7 @@ function calculateBalance() {
         balanceText = 'positivo'
     }
 
-    console.log(`Seu ${balanceText}: R$ ${total.toFixed(2)}`)
+    console.log(`Saldo ${balanceText}: R$ ${total.toFixed(2)}`)
 }
 
 calculateBalance()
