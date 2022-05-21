@@ -2,15 +2,21 @@
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
 
-<div id="app">
-    <CONTADOR></CONTADOR>
-    <Contador></Contador>
-    <contadoR></contadoR>
+<div id="app1">
+    <contador1></contador1>
+    <contador1></contador1>
+    <contador1></contador1>
+</div>
+<hr>
+<div id="app2">
+    <app-contador></app-contador>
+    <app-contador></app-contador>
+    <app-contador></app-contador>
 </div>
 
 <script>
     // Registro Global
-    Vue.component('contador', {
+    const contador = {
         template: `
           <div>
             <span>{{ contador }}</span>
@@ -24,10 +30,22 @@
             }
         }
 
-    })
-
+    }
 
     new Vue({
-        el: '#app',
+        el: '#app1',
+        // Registro Local
+        components: {
+            contador1: contador
+        }
     })
+
+    new Vue({
+        el: '#app2',
+        // Registro Local
+        components: {
+            'app-contador': contador
+        }
+    })
+
 </script>
