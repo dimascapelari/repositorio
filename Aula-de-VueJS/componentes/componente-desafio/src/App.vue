@@ -1,11 +1,11 @@
 <template>
   <v-app>
-    <app-menu />
-    <app-toolbar />
+    <Menu />
+    <Toolbar />
     <v-content>
-      <app-carousel />
+      <Carousel />
     </v-content>
-    <app-footer />
+    <Footer />
   </v-app>
 </template>
 
@@ -16,11 +16,12 @@ import Toolbar from "@/components/template/CompToolbar.vue";
 import Footer from "@/components/template/CompoFooter.vue";
 
 export default {
-  components: {
-    "app-footer": Footer,
-    "app-carousel": Carousel,
-    "app-toolbar": Toolbar,
-    "app-menu": Menu,
-  },
+  /*components: {
+    appFooter: Footer,
+    appCarousel: Carousel,
+    appToolbar: Toolbar,
+    appMenu: Menu,
+  },*/
+  components: { Footer, Carousel, Toolbar, Menu },
 };
 </script>
