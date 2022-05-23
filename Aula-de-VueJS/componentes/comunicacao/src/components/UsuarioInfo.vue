@@ -28,8 +28,9 @@ export default {
       return this.nome.split("").reverse().join("");
     },
     reiniciarNome() {
-      this.nome = "Pedro";
-      this.$emit("nomeMudou", this.nome);
+      //this.nome = "Pedro";
+      // this.$emit("nomeMudou", this.nome);
+      this.$emit("nomeMudou", "Pedro");
     },
   },
 };
