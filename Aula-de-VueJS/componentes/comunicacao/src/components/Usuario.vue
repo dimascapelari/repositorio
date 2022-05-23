@@ -8,7 +8,7 @@
     <button @click="alterarNome">Alterar Nome</button>
     <hr />
     <div class="componentes">
-      <app-usuario-info v-bind:nome="nome" />
+      <app-usuario-info v-bind:nome="nome" @nomeMudou="nome = $event" />
       <app-usuario-editar />
     </div>
   </div>
