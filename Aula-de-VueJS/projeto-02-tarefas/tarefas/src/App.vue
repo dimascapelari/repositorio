@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Tarefas</h1>
+    <h1>Lista de Tarefas</h1>
     <TasksProgress :progress="progress" />
     <NewTask @taskAdded="addTask" />
     <TaskGrid
@@ -8,6 +8,7 @@
       @taskDeleted="deleteTask"
       @taskStateChanged="toggleTaskState"
     />
+    <p>&copy;<i> Copyright Dimas Capelari - 2022</i></p>
   </div>
 </template>
 
@@ -73,7 +74,8 @@ export default {
 <style>
 body {
   font-family: "Lato", sans-serif;
-  background: linear-gradient(to right, rgb(22, 34, 42), rgb(58, 96, 115));
+  background: linear-gradient(90deg, rgb(0, 0, 0) 20%, rgb(19, 10, 146) 100%);
+  /* background: linear-gradient(to right, rgb(22, 34, 42), rgb(58, 96, 115));*/
   color: #fff;
 }
 
@@ -88,7 +90,20 @@ body {
 
 #app h1 {
   margin-bottom: 5px;
+  padding-bottom: 15px;
   font-weight: 300;
   font-size: 3rem;
+}
+
+@media (max-width: 800px) {
+  #app {
+    height: 100%;
+  }
+
+  #app h1 {
+    font-size: 2.5rem;
+    margin-top: 50px;
+    padding-bottom: 10px;
+  }
 }
 </style>

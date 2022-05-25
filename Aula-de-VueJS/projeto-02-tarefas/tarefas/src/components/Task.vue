@@ -30,10 +30,10 @@ export default {
   position: relative;
   box-sizing: border-box;
   width: 350px;
-  height: 150px;
+  height: 100px;
   padding: 10px;
   border-radius: 8px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   cursor: pointer;
   user-select: none;
@@ -73,5 +73,11 @@ export default {
   border-radius: 15px;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .task {
+    width: 320px;
+  }
 }
 </style>

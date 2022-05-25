@@ -34,9 +34,9 @@ export default {
 
 .form-element {
   outline: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: 1px solid #fff;
-  padding: 5px 10px 8px;
+  padding: 5px 10px 7px;
   color: #fff;
 }
 
@@ -52,5 +52,16 @@ button.form-element {
   background-color: #2196f3;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  .new-task {
+    margin: 1px;
+    padding: 6px 0px 10px 0px;
+  }
+
+  input.form-element {
+    width: 260px;
+  }
 }
 </style>
