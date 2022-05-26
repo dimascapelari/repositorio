@@ -45,7 +45,6 @@ $(document).ready(function () {
 
     })
 
-
     let containerC = document.getElementById('circleC')
 
     let circleC = new ProgressBar.Circle(containerC, {
@@ -116,6 +115,5 @@ $(document).ready(function () {
         $('#data-area').parallax({ imageSrc: './img/cidadeparallax.png' })
 
     }, 250)
-
 
 })
