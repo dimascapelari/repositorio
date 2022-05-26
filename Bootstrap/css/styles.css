@@ -166,3 +166,20 @@ header,
 .service-box:hover>h4 {
     color: #65DAF9;
 }
+
+/* Dados */
+.circle-box div {
+    padding: 0 40px;
+}
+
+.progressbar-text {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+#data-area p {
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 20px;
+}
