@@ -89,7 +89,7 @@ $(document).ready(function () {
 
     })
 
-    // Iniciando o loader quando o usuário chega no elemento
+    // Iniciando o loader quando o usuário chega a 500px do elemento
     let dataAreaOffset = $('#data-area').offset()
     let stop = 0
 
