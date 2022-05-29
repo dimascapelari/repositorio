@@ -49,6 +49,10 @@ header,
     padding: 1rem .8rem;
 }
 
+.nav-item.active {
+    border-bottom: 3px solid #FFF;
+}
+
 /* Slider */
 .container-fluid {
     padding: 0;

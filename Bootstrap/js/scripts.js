@@ -12,11 +12,8 @@ $(document).ready(function () {
         to: { color: '#65DAF9' },
 
         step: function (state, circle) {
-
             circle.path.setAttribute('stroke', state.color)
-
             let value = Math.round(circle.value() * 60)
-
             circle.setText(value)
 
         }
@@ -91,6 +88,7 @@ $(document).ready(function () {
 
     // Iniciando o loader quando o usuário chega a 500px do elemento
     let dataAreaOffset = $('#data-area').offset()
+    // stop serve para a animação não carregar mais que uma vez
     let stop = 0
 
     $(window).scroll(function (e) {
@@ -152,17 +150,46 @@ $(document).ready(function () {
                 }
             })
         }
-
-        // scroll para seções
-        let navBar = $('.nav-item')
-
-        let bannerSection = $('#mainSlider')
-        let aboutSection = $('#about-area')
-        let servicesSection = $('#services-area')
-        let tempSection = $('#team-area')
-        let portfolioSection = $('#portfolio-area')
-        let contactSection = $('#contact-area')
-
     }
 
-})
+    // scroll para seções
+    let navBtn = $('.nav-item')
+
+    let bannerSection = $('#mainSlider')
+    let aboutSection = $('#about-area')
+    let servicesSection = $('#services-area')
+    let tempSection = $('#team-area')
+    let portfolioSection = $('#portfolio-area')
+    let contactSection = $('#contact-area')
+
+    let scrollTo = ''
+
+    $(navBtn).click(function () {
+
+        let btnId = $(this).attr('id')
+
+
+        if (btnId == 'about-menu') {
+            scrollTo = aboutSection
+        } else if (btnId == 'service-menu') {
+            scrollTo = servicesSection
+        } else if (btnId == 'team-menu') {
+            scrollTo = tempSection
+        } else if (btnId == 'portfolio-menu') {
+            scrollTo = portfolioSection
+        } else if (btnId == 'contact-menu') {
+            scrollTo = contactSection
+        } else {
+            scrollTo = bannerSection
+        }
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(scrollTo).offset().top - 70
+        }, 1500);
+
+    })
+
+
+});
+
+
