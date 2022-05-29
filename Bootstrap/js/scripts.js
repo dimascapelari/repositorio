@@ -152,6 +152,17 @@ $(document).ready(function () {
                 }
             })
         }
+
+        // scroll para seções
+        let navBar = $('.nav-item')
+
+        let bannerSection = $('#mainSlider')
+        let aboutSection = $('#about-area')
+        let servicesSection = $('#services-area')
+        let tempSection = $('#team-area')
+        let portfolioSection = $('#portfolio-area')
+        let contactSection = $('#contact-area')
+
     }
 
 })
