@@ -168,10 +168,9 @@ $(document).ready(function () {
 
         let btnId = $(this).attr('id')
 
-
         if (btnId == 'about-menu') {
             scrollTo = aboutSection
-        } else if (btnId == 'service-menu') {
+        } else if (btnId == 'services-menu') {
             scrollTo = servicesSection
         } else if (btnId == 'team-menu') {
             scrollTo = tempSection
