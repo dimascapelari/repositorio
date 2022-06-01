@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/vue.min.js"></script>
+    <title>Desafio Dimas</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="conteudo">
+                <h1>Sobre o profissional</h1>
+                <h2>Dados do profissional</h2>
+                <p>Nome Completo*</p>
+                <input class="nome" type="text" placeholder="Digite o nome completo">
+                <p>CPF*</p>
+                <input type="text" placeholder="Digite um CPF">
+                <p>Número de celular*</p>
+                <input type="number" placeholder="(00)0 0000-0000">
+                <div class="select">
+
+                    <p>Estado*<br><select class="select-input1" name="Selecione"></select>
+                    <p class="cidade">Cidade*<br><select class="select-input2" name="Selecione"
+                            placeholder="Selecione"></select></p>
+                </div>
+
+                <div class="barra-container">
+                    <div class="barra"></div>
+                    <p> 1 de 2</p>
+                </div>
+
+                <div class="botao">
+                    <button @click="alterar"> {{ proximo }}</button>
+                </div>
+            </div>
+            <div class="img">
+                <img class="imgpg1" src="./img/pagina-1.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
