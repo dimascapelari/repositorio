@@ -5,6 +5,10 @@
     font-family: Open Sans;
 }
 
+.container-out i {
+    margin-bottom: 20px;
+}
+
 #app {
     background-color: #ffe766;
     width: 100%;

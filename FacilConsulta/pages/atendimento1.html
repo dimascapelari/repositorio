@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/vue.min.js"></script>
+    <script src="https://kit.fontawesome.com/b8765e35d0.js" crossorigin="anonymous"></script>
     <title>Atendimento 1</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;700&display=swap"
@@ -15,48 +16,56 @@
 
 <body>
     <div id="app">
-        <div class="container">
-            <div class="conteudo">
-                <h1>Sobre o atendimento</h1>
-                <h2>Detalhes do atendimento</h2>
+        <div class="container-out">
+            <h3><a href="../index.html">
+                    <i class="fa-solid fa-angle-left"></i>
+                </a></h3>
+            <div class="container">
+                <div class="conteudo">
+                    <h1>Sobre o atendimento</h1>
+                    <h2>Detalhes do atendimento</h2>
 
-                <p>Especialidade principal*</p><select class="select-principal" name="Selecione" option value="">
-                    </option>
-                    <option value="1">Selecione</option>
-                    <option value="2">2</option>
-                    <option value="outro">outro</option>
-                </select>
+                    <p>Especialidade principal*</p><select class="select-principal" name="Selecione" option value="">
+                        </option>
+                        <option value="1">Selecione</option>
+                        <option value="2">2</option>
+                        <option value="outro">outro</option>
+                    </select>
 
-                <p>Informe o preço da consulta*</p>
-                <div class="input-quadrado">
-                    <div class="quadrado">R$</div>
-                    <input class="input-valor" type="number" placeholder="Valor">
-                </div>
-
-                <p class="pagamento">Formas de pagamento da consulta*</p>
-                <div class="checkbox-container">
-                    <div class="check"><label class="checkbox"><input type="checkbox" name="Receber">&nbsp &nbsp &nbsp
-                            Em
-                            dinheiro
-                        </label>
+                    <p>Informe o preço da consulta*</p>
+                    <div class="input-quadrado">
+                        <div class="quadrado">R$</div>
+                        <input class="input-valor" type="number" placeholder="Valor">
                     </div>
-                    <div class="check"><label class="checkbox"><input type="checkbox" name="Receber">&nbsp &nbsp &nbsp
-                            Pix</label></div>
-                    <div class="check"><label class="checkbox"><input type="checkbox" name="Receber">&nbsp &nbsp &nbsp
-                            Cartão de
-                            crédito</label></div>
-                </div>
 
-                <div class="barra-container">
-                    <div class="barra"></div>
-                    <p> 2 de 2</p>
+                    <p class="pagamento">Formas de pagamento da consulta*</p>
+                    <div class="checkbox-container">
+                        <div class="check"><label class="checkbox"><input type="checkbox" name="Receber">&nbsp &nbsp
+                                &nbsp
+                                Em
+                                dinheiro
+                            </label>
+                        </div>
+                        <div class="check"><label class="checkbox"><input type="checkbox" name="Receber">&nbsp &nbsp
+                                &nbsp
+                                Pix</label></div>
+                        <div class="check"><label class="checkbox"><input type="checkbox" name="Receber">&nbsp &nbsp
+                                &nbsp
+                                Cartão de
+                                crédito</label></div>
+                    </div>
+
+                    <div class="barra-container">
+                        <div class="barra"></div>
+                        <p> 2 de 2</p>
+                    </div>
+                    <div class="botao">
+                        <button @click="alterar"> {{ proximo }}</button>
+                    </div>
                 </div>
-                <div class="botao">
-                    <button @click="alterar"> {{ proximo }}</button>
+                <div class="img">
+                    <img class="imgpg1" src="../img/pagina-2.png" alt="">
                 </div>
-            </div>
-            <div class="img">
-                <img class="imgpg1" src="../img/pagina-2.png" alt="">
             </div>
         </div>
     </div>
