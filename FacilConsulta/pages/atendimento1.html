@@ -17,15 +17,16 @@
 <body>
     <div id="app">
         <div class="container-out">
-            <h3><a href="../index.html">
-                    <i class="fa-solid fa-angle-left"></i>
-                </a></h3>
+            <h3>
+                <i @click="recuar" class="fa-solid fa-angle-left"></i>
+            </h3>
             <div class="container">
                 <div class="conteudo">
                     <h1>Sobre o atendimento</h1>
                     <h2>Detalhes do atendimento</h2>
 
-                    <p>Especialidade principal*</p><select class="select-principal" name="Selecione" option value="">
+                    <p>Especialidade principal*</p>
+                    <select class="select-principal" name="Selecione" option value="">
                         </option>
                         <option value="1">Selecione</option>
                         <option value="2">2</option>
@@ -60,7 +61,7 @@
                         <p> 2 de 2</p>
                     </div>
                     <div class="botao">
-                        <button @click="alterar"> {{ proximo }}</button>
+                        <button @click="avancar"> {{ proximo }}</button>
                     </div>
                 </div>
                 <div class="img">

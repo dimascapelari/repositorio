@@ -18,9 +18,7 @@
 
     <div id="app">
         <div class="container-out">
-            <h3><a href="../pages/atendimento2.html">
-                    <i class="fa-solid fa-angle-left"></i>
-                </a></h3>
+            <h3><i @click="recuar" class="fa-solid fa-angle-left"></i></h3>
             <div class="container">
                 <div class="conteudo">
                     <h1>Revisão do cadastro</h1>
@@ -46,7 +44,7 @@
 
 
                     <div class="botao">
-                        <button @click="alterar"> CADASTRAR PROFISSIONAL </button>
+                        <button @click="avancar"> CADASTRAR PROFISSIONAL </button>
                     </div>
                     <p class="editar">Editar cadastro</p>
                 </div>

@@ -74,8 +74,7 @@ input::placeholder {
     display: flex;
 }
 
-.select-input1,
-.select-input2 {
+.select-input {
     width: 140px;
     height: 28px;
     border-radius: 2px;
@@ -129,4 +128,48 @@ button:hover {
     text-align: right;
     border-radius: 3px;
     background: linear-gradient(to right, #483698 0%, #483698 50%, #dedede 50%, #dedede 100%);
+}
+
+@media(max-width: 800px) {
+    #app {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .imgpg1 {
+        display: none;
+    }
+
+    .container {
+        height: 100%;
+        width: 90vw;
+    }
+
+    .barra-container p {
+        padding-left: 30px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media(max-width: 500px) {
+    #app {
+        height: 100vh;
+    }
+
+    .imgpg1 {
+        display: none;
+    }
+
+    .container {
+        padding: 20px;
+        width: 100vw;
+        height: 90%;
+    }
+
 }

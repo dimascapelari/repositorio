@@ -4,9 +4,8 @@ new Vue({
         proximo: 'PRÓXIMO'
     },
     methods: {
-        alterar() {
-            this.proximo = window.location.href = '../pages/atendimento1.html'
-            //this.proximo = open('../pages/atendimento1.html', '_blank')
+        avancar() {
+            this.proximo = window.location.href = './pages/atendimento1.html'
             this.proximo = 'PRÓXIMO'
         }
     }

@@ -27,9 +27,23 @@
                 <input type="number" placeholder="(00)0 0000-0000">
                 <div class="select">
 
-                    <p>Estado*<br><select class="select-input1" name="Selecione"></select>
-                    <p class="cidade">Cidade*<br><select class="select-input2" name="Selecione"
-                            placeholder="Selecione"></select></p>
+                    <p>Estado*<br>
+                        <select class="select-input" name="Selecione" option value="">
+                            </option>
+                            <option value="1">Selecione</option>
+                            <option value="2">2</option>
+                            <option value="outro">outro</option>
+                        </select>
+                    </p>
+
+                    <p class="cidade">Cidade*<br>
+                        <select class="select-input" name="Selecione" option value="">
+                            </option>
+                            <option value="1">Selecione</option>
+                            <option value="2">2</option>
+                            <option value="outro">outro</option>
+                        </select>
+                    </p>
                 </div>
 
                 <div class="barra-container">
@@ -38,11 +52,11 @@
                 </div>
 
                 <div class="botao">
-                    <button @click="alterar"> {{ proximo }}</button>
+                    <button @click="avancar"> {{ proximo }}</button>
                 </div>
             </div>
             <div class="img">
-                <img class="imgpg1" src="./img/pagina-1.png" alt="">
+                <img class="imgpg1" src="./img/pagina-1.png" alt="Imagem de 2 Médicos">
             </div>
         </div>
     </div>

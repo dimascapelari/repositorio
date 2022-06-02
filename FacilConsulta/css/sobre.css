@@ -9,6 +9,10 @@
     margin-bottom: 20px;
 }
 
+.container-out i:hover {
+    cursor: pointer;
+}
+
 #app {
     background-color: #ffe766;
     width: 100%;
@@ -90,4 +94,63 @@ button:hover {
     color: #483698;
     font-weight: 700;
     font-family: Comfortaa;
+}
+
+
+@media(max-width: 800px) {
+    #app {
+        height: auto;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .imgpg1 {
+        display: none;
+    }
+
+    .container {
+        height: 100%;
+        width: 90vw;
+    }
+
+    .check {
+        width: auto;
+    }
+
+    .barra-container p {
+        padding-left: 30px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 500px) {
+
+    h3 {
+        padding-left: 30px;
+    }
+
+    #app {
+        height: 100vh;
+    }
+
+    .imgpg1 {
+        display: none;
+    }
+
+    .container {
+        padding: 20px;
+        width: 100vw;
+        height: 650px;
+    }
+
+    .check {
+        width: auto;
+    }
+
 }
