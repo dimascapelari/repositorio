@@ -5,7 +5,7 @@
         :tela="tela"
         :numeroVoto="numeroVoto"
         :quantidadeNumeros="quantidadeNumeros"
-        :cadidato="candidato"
+        :candidato="candidato"
       />
       <CompTeclado :adicionarNumero="adicionarNumero" />
     </div>

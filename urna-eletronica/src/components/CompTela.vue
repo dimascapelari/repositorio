@@ -15,19 +15,18 @@
             {{ value }}
           </div>
         </div>
-        <!--
+        <!--  --------------------------------------------------------------------------------  -->
         <div class="urna-tela-voto-descricao">
           Nome:
           <strong> {{ candidato.nome ? candidato.nome : "________" }} </strong>
         </div>
 
         <div class="urna-tela-voto-descricao">
-          Partido:
-          <strong>
+          Partido:<strong>
             {{ candidato.partido ? candidato.partido : "________" }}
           </strong>
         </div>
--->
+        <!--  --------------------------------------------------------------------------------  -->
       </div>
       <div class="urna-tela-voto-imagem"></div>
       <div class="urna-tela-voto-instrucoes"></div>
