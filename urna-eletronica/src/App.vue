@@ -130,7 +130,8 @@ export default {
             nome: "Ash",
             partido: "Pokemon",
             imagem:
-              "https://raw.githubusercontent.com/william-costa/wdev-urna-eletronica-resources/master/images/ash.png",
+              //"https://raw.githubusercontent.com/william-costa/wdev-urna-eletronica-resources/master/images/ash.png",
+              "./src/assets/img/ash.png",
           },
           "08": {
             nome: "Vegeta",
