@@ -7,7 +7,12 @@
         :quantidadeNumeros="quantidadeNumeros"
         :candidato="candidato"
       />
-      <CompTeclado :adicionarNumero="adicionarNumero" />
+      <CompTeclado
+        :adicionarNumero="adicionarNumero"
+        :corrigir="corrigir"
+        :confirmar="confirmar"
+        :votarEmBranco="votarEmBranco"
+      />
     </div>
   </div>
 </template>
@@ -17,6 +22,9 @@ import "@/css/global.css";
 import CompTeclado from "@/components/CompTeclado";
 import CompTela from "@/components/CompTela";
 
+import confirmAudio from "./assets/audios/confirm.wav";
+import keyAudio from "./assets/audios/key.wav";
+
 export default {
   name: "App",
   components: {
@@ -25,6 +33,9 @@ export default {
   },
   methods: {
     adicionarNumero(numero) {
+      //EXECUTA SOM DA TECLA
+      this.executarSom(keyAudio);
+
       //VERIFICA LIMITE DE NÚMEROS VOTADOS
       if (this.numeroVoto.length == this.quantidadeNumeros) {
         return false;
@@ -53,6 +64,58 @@ export default {
         partido: "Voto nulo",
         imagem: "",
       };
+    },
+    corrigir() {
+      //EXECUTA SOM DA TECLA
+      this.executarSom(keyAudio);
+      this.limpar();
+    },
+    limpar() {
+      this.candidato = {};
+      this.numeroVoto = "";
+    },
+    confirmar() {
+      //VOTO INCOMPLETO
+      if (this.numeroVoto.length < this.quantidadeNumeros) {
+        return false;
+      }
+      return this.avancarTela();
+    },
+    avancarTela() {
+      //EXECUTA SOM DE CONFIRMAÇÃO
+      this.executarSom(confirmAudio);
+
+      //VEREADOR
+      if (this.tela == "prefeito") {
+        this.tela = "vereador";
+        this.quantidadeNumeros = 5;
+        return this.limpar();
+      }
+      //FINALIZAÇÃO
+      this.tela = "fim";
+
+      //INSTANCIA ATUAL
+      var instancia = this;
+
+      //VOLTAR AO INÍCIO
+      setTimeout(function () {
+        instancia.tela = "prefeito";
+        instancia.quantidadeNumeros = 2;
+        return instancia.limpar();
+      }, 5000);
+    },
+    votarEmBranco() {
+      //TELA DE FINALIZAÇÃO
+      if (this.tela == "fim") return false;
+
+      this.limpar();
+      this.avancarTela();
+    },
+    executarSom(arquivoSom) {
+      if (arquivoSom) {
+        let audio = new Audio(arquivoSom);
+        audio.play();
+      }
     },
   },
   data() {
