@@ -12,14 +12,25 @@
 
 <body>
     <div id="root">
-        <p>O meu nome é {{ nome }}.</p>
+        <p>{{ nome }}</p>
+        <input v-model="nome">
+
+        <div v-if="visivel">
+            <h3>DIV 1</h3>
+        </div>
+
+        <div v-else>
+            <h3>DIV 2</h3>
+        </div>
+
     </div>
 
     <script>
         let root = new Vue({
             el: "#root",
             data: {
-                nome: "Dimas Capelari"
+                nome: "Dimas Capelari",
+                visivel: false
             }
         })
 
