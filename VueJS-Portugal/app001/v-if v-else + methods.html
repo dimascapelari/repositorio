@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- importação do VUE -->
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+        <div v-if="visivel">
+            <h3>DIV 1</h3>
+        </div>
+
+        <div v-else>
+            <h3>DIV 2</h3>
+        </div>
+
+        <button v-on:click="mostrarEsconder">Click</button>
+        <button v-on:click="metodo1">Click 1</button>
+
+    </div>
+
+    <script>
+        let root = new Vue({
+            el: "#root",
+            data: {
+                visivel: true
+            },
+            methods: {
+                mostrarEsconder: function () {
+                    this.visivel = !this.visivel
+                    console.log(this.visivel)
+                },
+                metodo1: function () {
+                    console.log('Experiência')
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
