@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- importação do VUE -->
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+
+        <input v-model="novaFruta">
+        <button v-on:click="inserirFruta">Inserir</button>
+
+        <p>Lista de frutas:</p>
+        <ul>
+            <li v-for="fruta in frutas">{{ fruta }}</li>
+        </ul>
+        <p>Total: <b>{{ totalFrutos }}</b></p>
+    </div>
+
+    <script>
+        let root = new Vue({
+            el: "#root",
+            data: {
+                frutas: [],
+                novaFruta: '',
+                totalFrutos: 0
+            },
+            methods: {
+                inserirFruta: function () {
+                    //Acrescenta novaFruta dentro do Array frutas [] com o push
+                    this.frutas.push(this.novaFruta)
+
+                    //Limpa o input depois de digitar o nome da fruta
+                    this.novaFruta = ''
+
+                    //Mostra o total do Array frutas [] com o length
+                    this.totalFrutos = this.frutas.length
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
