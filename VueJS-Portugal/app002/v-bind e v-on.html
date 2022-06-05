@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- importação do VUE -->
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h3>O país selecionado é {{ pais }}</h3>
+        <img v-bind:src="imagem">
+        <div>
+            <button v-on:click="mostrarPortugal">Portugal</button>
+            <button v-on:click="mostrarBrasil">Brasil</button>
+        </div>
+    </div>
+
+    <script>
+        let root = new Vue({
+            el: "#root",
+            data: {
+                pais: '',
+                imagem: ''
+            },
+            methods: {
+                mostrarPortugal: function () {
+                    this.pais = 'Portugal'
+                    this.imagem = 'images/bandeira-de-portugal.png'
+                },
+                mostrarBrasil: function () {
+                    this.pais = 'Brasill'
+                    this.imagem = 'images/bandeira-do-brasil.png'
+                }
+            }
+        })
+
+        root.mostrarBrasil()
+
+    </script>
+</body>
+
+</html>
