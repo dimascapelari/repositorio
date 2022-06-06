@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- importação do VUE -->
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <span v-html="valor"></span>
+        <div>
+            <button @click="t1">Título 1</button>
+            <button @click="t3">Título 3</button>
+            <button @click="t5">Título 5</button>
+        </div>
+    </div>
+
+    <script>
+        let root = new Vue({
+            el: "#root",
+            data: {
+                valor: '<h4>Título Vue</h4>'
+            },
+            methods: {
+                t1: function () {
+                    this.valor = '<h1>Título Vue</h1>'
+                },
+                t3: function () {
+                    this.valor = '<h3>Título Vue</h3>'
+                },
+                t5: function () {
+                    this.valor = '<h5>Título Vue</h5>'
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
