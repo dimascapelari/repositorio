@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- importação do VUE -->
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <lista-nomes :nomescomponent='nomes' />
+    </div>
+
+    <script>
+        // -----------------------------------
+        Vue.component('lista-nomes', {
+            props: [
+                'nomescomponent'
+            ],
+            template: `
+                <ul>
+                    <li v-for="caraca in nomescomponent">{{ caraca }}</li>
+                </ul>
+            `
+        })
+        // -----------------------------------
+        let root = new Vue({
+            el: "#root",
+            data: {
+                nomes: ['João', 'Ana', 'Carlos']
+            }
+        })
+
+    </script>
+</body>
+
+</html>
