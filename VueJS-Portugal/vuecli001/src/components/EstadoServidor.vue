@@ -15,5 +15,13 @@ export default {
       estado: "Ligado",
     };
   },
+  methods: {
+    ligar() {
+      this.estado = "Ligado";
+    },
+    desligar() {
+      this.estado = "Desligado";
+    },
+  },
 };
 </script>
