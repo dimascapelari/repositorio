@@ -4,6 +4,7 @@
     <div>
       <button @click="ligar">Ligar</button>
       <button @click="desligar">Desligar</button>
+      <button @click="ligaDesliga">Liga/Desliga</button>
     </div>
   </div>
 </template>
@@ -21,6 +22,13 @@ export default {
     },
     desligar() {
       this.estado = "Desligado";
+    },
+    ligaDesliga() {
+      if (this.estado == "Ligado") {
+        this.estado = "Desligado";
+      } else if (this.estado == "Desligado") {
+        this.estado = "Ligado";
+      }
     },
   },
 };

@@ -3,6 +3,9 @@
     <h3>ESTADO DOS SERVIDORES</h3>
     <hr />
     <estado-servidor />
+    <estado-servidor />
+    <estado-servidor />
+    <estado-servidor />
   </div>
 </template>
 
