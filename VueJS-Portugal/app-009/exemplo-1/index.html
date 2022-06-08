@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <p>{{ nome }} {{ apelido }}</p>
+        <comp1></comp1>
+        <comp2></comp2>
+    </div>
+
+    <script>
+        // --------------------------------------
+        Vue.component('comp1', {
+
+            template:
+                `
+                <div>
+                <p>componente1 - {{valor1}}</p>
+                <p>componente1 - {{valor2}}</p>
+                <button @click="executar()">Clicar</button>
+                </div>
+                `,
+            data: function () {
+                return {
+                    valor1: 100,
+                    valor2: 200
+                }
+            },
+            methods: {
+                executar: function () {
+                    this.valor1 = 20000
+                }
+            }
+        })
+
+        // --------------------------------------
+        Vue.component('comp2', {
+
+            template:
+                `
+                <p>componente2</p>
+
+                `
+        })
+
+        // --------------------------------------
+        let app = new Vue({
+            el: "#app",
+            data: {
+                nome: "Dimas",
+                apelido: "Capelari"
+            }
+        })
+    </script>
+</body>
+
+</html>

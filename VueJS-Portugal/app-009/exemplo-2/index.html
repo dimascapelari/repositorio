@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <p>Este texto é da instância Vue</p>
+        <button @click="alterar()">Alterar</button>
+        <hr>
+
+        <comp1 v-bind:valor="valor"></comp1>
+    </div>
+
+
+    <script>
+        // --------------------------------
+        Vue.component('comp1', {
+            template:
+                `
+            <div>
+                <p>Valor dentro do componente 1: {{ valor }}</p>
+            </div>
+            `,
+            data: function () {
+                return {
+                    valor: 1000
+                }
+            },
+            props: [
+                'valor'
+            ]
+        })
+
+        // --------------------------------
+        new Vue({
+            el: '#app',
+            data: {
+                valor: 20000
+            },
+            methods: {
+                alterar: function () {
+                    this.valor += 500
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
