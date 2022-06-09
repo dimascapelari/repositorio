@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.1.1/vuex.min.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <div>
+            <button @click="diminuir()">Diminuir</button>
+            <button @click="aumentar()">Aumentar</button>
+            <p>Valor: {{valor}}</p>
+        </div>
+    </div>
+
+    <script>
+        // --------------------------------
+        // VUEX
+        const store = new Vuex.Store({
+            state: {
+                valor: 0
+            },
+            mutations: {
+                incrementar(state) {
+                    state.valor++
+                },
+                decrementar(state) {
+                    state.valor--
+                }
+            }
+        })
+
+        // --------------------------------
+        new Vue({
+            el: '#app',
+            computed: {
+                valor: function () {
+                    return store.state.valor
+                }
+            },
+
+            methods: {
+                diminuir: function () {
+                    store.commit('decrementar')
+
+                },
+
+                aumentar: function () {
+                    store.commit('incrementar')
+                }
+            }
+        })
+
+    </script>
+</body>
+
+</html>
