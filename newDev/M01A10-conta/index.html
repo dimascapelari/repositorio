@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M01A05-objetos</title>
+    <title>Conta Poupança</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -20,13 +21,13 @@
 
     <p id="acoes">
         <input id="valor"><br>
-        <input type="button" value="Depóstio" onclick="poupanca.depositar()">
-        <input type="button" value="Saque" onclick="poupanca.sacar()"><br>
-        <input type="button" value="Extrato" onclick="">
+        <input class="bt" type="button" value="Depóstio" onclick="poupanca.depositar()">
+        <input class="bt" type="button" value="Saque" onclick="poupanca.sacar()"><br>
+        <input class="bt" type="button" value="Extrato" onclick="poupanca.exibirExtrato()">
     </p>
 
     <p id="extrato" style="background-color: #aaffff;">
-        Extrato
+        Extrato:
     </p>
 
     <script src="./script.js"></script>

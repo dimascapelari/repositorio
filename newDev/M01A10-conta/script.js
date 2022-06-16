@@ -18,6 +18,7 @@ var poupanca = {
         //var valor = valorHTML.value
         this.saldo += Number(valorHTML.value)
         saidaSaldo.innerHTML = this.saldo
+        this.movimentacao.push('Depósito de R$ ' + valorHTML.value)
         valorHTML.value = ''
 
     },
@@ -29,14 +30,23 @@ var poupanca = {
             alert('Saldo Insulficiente!')
         } else {
             this.saldo -= valor
+            this.movimentacao.push('Saque de R$ ' + valor)
         }
         saidaSaldo.innerHTML = this.saldo
         valorHTML.value = ''
 
     },
 
-    exibirExtrato: function () { },
+    exibirExtrato: function () {
 
+        saidaExtrato.innerHTML = 'Extrato: <br>'
 
+        for (i = 0; i <= this.movimentacao.length - 1; i++) {
+
+            saidaExtrato.innerHTML += this.movimentacao[i] + '<br>'
+
+            console.log(this.movimentacao)
+        }
+    },
 
 }
