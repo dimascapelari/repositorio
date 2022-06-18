@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container input {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Exercício 04</h1>
+    <h2>Calcular troco.</h2>
+    <div class="container">
+        <input id="preco" type="text" placeholder="Preço unitário do produto">
+        <input id="quantidade" type="text" placeholder="Quantidade comprada">
+        <input id="dinheiro" type="text" placeholder="Dinheiro recebido">
+
+        <input type="button" value="Calcular troco" onclick="calcular()">
+    </div>
+    <h3 id="troco">Troco = </h3>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
