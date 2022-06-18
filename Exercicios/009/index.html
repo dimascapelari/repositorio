@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container input {
+            width: 200px;
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Exercício 09</h1>
+    <h2>Converte tempo.</h2>
+    <div class="container">
+        <input id="duracaoA" type="text" placeholder="Digite a duração em segundos">
+        <h3 id="resultadoA">Resultado A</h3>
+        <input id="duracaoB" type="text" placeholder="Digite a duração em segundos">
+        <h3 id="resultadoB">Resultado B</h3>
+        <input id="duracaoC" type="text" placeholder="Digite a duração em segundos">
+        <h3 id="resultadoC">Resultado C</h3>
+        <input type="button" value="Converter" onclick="converter()">
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
