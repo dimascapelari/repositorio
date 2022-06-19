@@ -13,11 +13,17 @@ function bhaskara() {
 
 
     if (!a || !b || !c) {
-        alert('Insira os valores de a, b e c');
+        //alert('Insira os valores de a, b e c');
+        x1.innerHTML = 'Insira os valores de A, B e C'
+        x2.innerHTML = ''
     } else if (a == 0) {
-        alert('O valor de A deve ser diferente de 0');
+        //alert('O valor de A deve ser diferente de 0');
+        x1.innerHTML = 'O valor de A deve ser diferente de 0'
+        x2.innerHTML = ''
     } else if (delta < 0) {
-        alert('Sem raízes reais');
+        //alert('Sem raízes reais');
+        x1.innerHTML = 'Esta equação não possui raízes reais'
+        x2.innerHTML = ''
     } else {
         x1.innerHTML = ((-b + Math.sqrt(delta)) / (2 * a)).toFixed(4)
         x2.innerHTML = ((-b - Math.sqrt(delta)) / (2 * a)).toFixed(4)
