@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 16</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container input {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Exercício 16</h1>
+    <h2>Arremesso de dardo.</h2>
+    <div class="container">
+        <h3>Digite as três distâncias:</h3>
+        <input id="dis1" type="text" placeholder="Primeira distância">
+        <input id="dis2" type="text" placeholder="Segunda distância">
+        <input id="dis3" type="text" placeholder="Terceira distância">
+        <h3 id="maior">MAIOR DISTÂNCIA =</h3>
+        <input type="button" value="Verificar maior distância" onclick="verificar()">
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>

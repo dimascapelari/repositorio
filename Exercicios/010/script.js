@@ -4,15 +4,17 @@ let terceiro = document.getElementById('terceiro')
 let menor = document.getElementById('menor')
 
 function comparar() {
+    let pri = Number(primeiro.value)
+    let seg = Number(segundo.value)
+    let ter = Number(terceiro.value)
 
-    if (Number(primeiro.value) < Number(segundo.value) && Number(primeiro.value) < Number(terceiro.value)) {
-        menor.innerHTML = `MENOR = ${Number(primeiro.value)}`
-    } else if (Number(segundo.value) < Number(primeiro.value) && Number(segundo.value) < Number(terceiro.value)) {
-        menor.innerHTML = `MENOR = ${Number(segundo.value)}`
-    } else if (Number(terceiro.value) < Number(primeiro.value) && Number(terceiro.value) < Number(segundo.value)) {
-        menor.innerHTML = `MENOR = ${Number(terceiro.value)}`
+    if (pri < seg && pri < ter) {
+        menor.innerHTML = `MENOR = ${pri}`
+    } else if (seg < pri && seg < ter) {
+        menor.innerHTML = `MENOR = ${seg}`
+    } else if (ter < pri && ter < seg) {
+        menor.innerHTML = `MENOR = ${ter}`
     } else {
         menor.innerHTML = `MENOR = EMPATE!`
     }
-
 }
