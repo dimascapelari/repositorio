@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 23</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container input {
+            width: 210px;
+            margin-bottom: 10px;
+        }
+
+        .container h3 {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Exercício 23</h1>
+    <h2>Valores inteiros X e Y.</h2>
+    <div class="container">
+
+        <h3>Digite dois números:</h3>
+        <input id="valor1" type="text" placeholder="Primeiro valor">
+        <input id="valor2" type="text" placeholder="Segundo valor">
+
+        <input type="button" value="Somar ímpares" onclick="calcular()">
+
+        <h3 id="resultado">SOMA DOS ÍMPARES =</h3>
+
+    </div>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
