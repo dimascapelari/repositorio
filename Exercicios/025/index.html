@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 25</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container input {
+            width: 210px;
+            margin-bottom: 10px;
+        }
+
+        .container h3 {
+            margin-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Exercício 25</h1>
+    <h2>Exibir o signo.</h2>
+    <form name="form">
+        <div class="container">
+            <input name="dia" type="text" placeholder="Dia">
+            <input name="mes" type="text" placeholder="Mês">
+            <input value="Consultar" type="button" onclick="algoritmo();" />
+            <h3 id="signo">Signo:</h3>
+        </div>
+    </form>
+</body>
+<script src="script.js"></script>
+
+</html>
