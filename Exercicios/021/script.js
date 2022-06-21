@@ -22,21 +22,4 @@ function calcular() {
 
     resultado.innerHTML = ` ${pares}`
 
-
-
-
-
-
-
-
-    /*
-    let i
-    let soma = 0
-
-    for (i = 0; i < Number(inicial.value); i++) {
-        if ((i % 2) == 0)
-            resultado.innerHTML = `Resultado: ${i + 1}`
-        console.log(i)
-    }
-    return Number(i) */
 }
