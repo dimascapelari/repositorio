@@ -1,3 +1,6 @@
+let dia = document.getElementById('dia')
+let mes = document.getElementById('mes')
+let signo = document.getElementById('signo')
 
 function algoritmo() {
     //let dia, mes;
