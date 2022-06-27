@@ -1,0 +1,7 @@
+@import url(./config/reset.css);
+@import url(./page/base.css);
+@import url(./config/color.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap');
+@import url(./page/nav.css);
+@import url(./page/main.css);
+@import url(./page/footer.css);

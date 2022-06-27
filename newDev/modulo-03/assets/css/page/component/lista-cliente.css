@@ -1,0 +1,73 @@
+.lista-cliente {
+    margin: auto;
+    width: 95vw;
+    max-width: 700px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: rgb(0 0 0 / 40%) 7px 9px 19px;
+    border-radius: 5px;
+}
+
+.lista-cliente__title {
+    padding: 1.5rem;
+    color: var(--lilas);
+    font-weight: 700;
+}
+
+.lista-cliente__table {
+    margin-bottom: 2rem;
+    min-width: 300px;
+}
+
+.lista-cliente__table th{
+    color: var(--lilas);
+    font-weight: 700;
+    background-color: var(--azul-claro);
+    border: 2px solid var(--white);
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.lista-cliente__table th a{
+    color: white;
+    background-color: var(--lilas);
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer; 
+}
+
+.lista-cliente__table__button {
+    color: white;
+    background-color: var(--lilas);
+    padding: 3px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;  
+}
+
+.lista-cliente__container__button {
+    margin: 5px;
+    min-width:  125px;
+    max-width: 125px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ 
+}
+
+@media (min-width: 768px) {
+
+    .lista-cliente {
+        width: 80vw;
+    }
+    .lista-cliente__table {
+        margin: 0 3rem 5rem;
+    }
+}

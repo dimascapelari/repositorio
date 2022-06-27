@@ -1,0 +1,16 @@
+.index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.index__item {
+    color: var(--lilas);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.index__link img {
+    max-width: 700px;
+    width: 90vw;
+}

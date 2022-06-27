@@ -1,0 +1,77 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main {
+    min-height: 47vh;
+    margin-bottom: 4rem;
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+select {
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    border: none;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+.button {
+    background-color: var(--lilas);
+    color: var(--white);
+    box-shadow: rgb(0 0 0 / 70%) 2px 2px 5px;
+
+    border-radius: 5px;
+    margin: 0 10px;
+
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .none {
+        display: none;
+    }
+}
+
+
+@keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+
+.container {
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#spinner {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-left-color: var(--lilas);
+    border-radius: 50%;
+    margin-top: 5vh;
+    width: 5vw;
+    height: 5vw;
+    animation: spin 1s linear infinite;
+}
