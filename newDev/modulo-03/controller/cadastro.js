@@ -1,8 +1,8 @@
 import { postVeiculo } from "../service/index.js"
-import { getCadastro } from "../view/index.js"
+import { view } from "../view/index.js"
 
 export const CadastroComponent = () => {
-    getCadastro();
+    view.getCadastroHtml();
 
     const formulario = document.getElementById('formulario')
     formulario.addEventListener('submit', function (event) {
