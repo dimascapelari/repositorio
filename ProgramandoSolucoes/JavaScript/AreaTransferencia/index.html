@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de transferência</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 162, 255);
+        }
+
+        input,
+        button {
+            font-size: 25px;
+            border-radius: 10px;
+            border: none;
+            padding: 20px;
+        }
+
+        input {
+            background-color: #d4e8ff;
+            color: #06224a;
+            width: 500px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            margin-left: 10px;
+            background-color: #123668;
+            color: white;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #010d1f;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h2>JavaScript - Como fazer copia de texto para área de transferência</h2> -->
+
+    <input type="text" name="texto" id="texto" value="https://www.google.com.br" readonly>
+    <button onclick="copiarTexto()">Copiar</button>
+
+</body>
+<script src="script.js"></script>
+
+</html>
