@@ -9,7 +9,6 @@
 // console.log(objetoVazio(obj))
 
 
-
 // let obj = {}
 // let verificaVazio = Object.keys(obj).length === 0
 // console.log(verificaVazio)
