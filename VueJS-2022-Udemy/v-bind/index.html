@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>VueJS-2022-Udemy</title>
+    <style>
+        .verde {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <a v-bind:href="site">Site</a>
+        <p v-bind:class="cor">Entendendo a diretiva v-bind</p>
+        <input type="text" v-bind:placeholder="instrucaoDePreenchimento" v-bind:value="valor">
+        <input type="checkbox" v-bind:checked="check">
+    </div>
+</body>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            site: 'https://www.google.com.br',
+            cor: 'verde',
+            instrucaoDePreenchimento: 'Placeholder - Diretiva v-bind',
+            valor: 'Entendendo a diretiva v-bind',
+            check: true
+        },
+        methods: {
+        }
+    })
+
+</script>
+
+</html>
