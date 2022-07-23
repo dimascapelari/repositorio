@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>VueJS-2022-Udemy</title>
+    <style>
+        .verde {
+            background-color: green;
+        }
+
+        .azul {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" @keyup="imprimirTexto()">
+        <button @click="mensagemAlerta()">Botão</button>
+    </div>
+</body>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        data: {
+
+        },
+        methods: {
+            imprimirTexto() {
+                console.log('Teste')
+            },
+            mensagemAlerta() {
+                alert('Mensagem de Alerta')
+            }
+        }
+    })
+
+</script>
+
+</html>
