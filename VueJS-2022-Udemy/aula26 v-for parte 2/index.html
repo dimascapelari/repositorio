@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>VueJS-2022-Udemy</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <!-- <li v-for="curso in cursos">{{ curso }}</li> -->
+            <!-- <li v-for="curso in cursos" v-text="curso"></li> -->
+            <li v-for="(curso, index) in cursos">{{ index }} - {{ curso }}</li>
+        </ul>
+        <hr>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- modo tradicional -->
+                <!-- <tr v-for="(curso, index) in cursos2">
+                    <td>{{ index }}</td>
+                    <td>{{ curso.titulo }}</td>
+                    <td>{{ curso.descricao }}</td>
+                </tr> -->
+
+                <!-- destructuring assignment -->
+                <tr v-for="({titulo, descricao}, index) in cursos2">
+                    <td>{{ index }}</td>
+                    <td>{{ titulo }}</td>
+                    <td>{{ descricao }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            cursos: [
+                'Laravel',
+                'Web Completo',
+                'Banco de Dados',
+                'Solid',
+                'Angular'
+            ],
+            cursos2: {
+                1000: {
+                    titulo: 'Laravel',
+                    descricao: 'Domine o framework PHP mais poderoso do mundo'
+                },
+                1001: {
+                    titulo: 'Banco de Dados',
+                    descricao: 'Aprenda os principais BDs relacionais do mercado'
+                }
+            }
+        },
+        methods: {
+
+        }
+    })
+
+</script>
+
+</html>
