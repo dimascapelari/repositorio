@@ -33,4 +33,21 @@ console.log(hobbies)
 let endereco: [string, number] = ["Av Principal", 90]
 console.log(endereco)
 let endereco2: [string, number, string] = ["Rua Importante", 1260, "Bloco C"]
-console.log(endereco2)
+console.log(endereco)
+
+// enums
+enum Cor {
+    Cinza, // 0
+    Verde = 100, // 1
+    Azul = 10,  // 2
+    Laranja,
+    Amarelo,
+    Vermelho = 100
+}
+
+let minhaCor: Cor = Cor.Verde
+console.log(minhaCor)
+
+console.log(Cor.Azul)
+console.log(Cor.Laranja, Cor.Amarelo)
+console.log(Cor.Verde, Cor.Vermelho)
