@@ -44,3 +44,8 @@ console.log(minhaCor);
 console.log(Cor.Azul);
 console.log(Cor.Laranja, Cor.Amarelo);
 console.log(Cor.Verde, Cor.Vermelho);
+// any
+let carro = 'BMW';
+console.log(carro);
+carro = { marca: 'BMW', ano: 2019 };
+console.log(carro);
