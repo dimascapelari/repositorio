@@ -139,10 +139,44 @@ console.log(baterPonto(9))
 */
 // ----- ----- ----- -----
 
-let funcionario: {
+// let funcionario: {
+//     supervisores: string[],
+//     baterPonto: (horas: number) => string
+// } = {
+//     supervisores: ['Ana', 'Fernando'],
+//     baterPonto(horario: number): string {
+//         if (horario <= 8) {
+//             return 'Ponto normal'
+//         } else {
+//             return 'Fora do horário!'
+//         }
+//     }
+// }
+
+// console.log(funcionario.supervisores)
+// console.log(funcionario.baterPonto(8))
+// console.log(funcionario.baterPonto(9))
+
+
+// Alias
+type Funcionario = {
     supervisores: string[],
     baterPonto: (horas: number) => string
-} = {
+}
+
+let funcionario: Funcionario = {
+    supervisores: ['Ana', 'Fernando'],
+    baterPonto(horario: number): string {
+        if (horario <= 8) {
+            return 'Ponto normal'
+        } else {
+            return 'Fora do horário!'
+        }
+    }
+}
+
+
+let funcionario2: Funcionario = {
     supervisores: ['Ana', 'Fernando'],
     baterPonto(horario: number): string {
         if (horario <= 8) {
@@ -156,3 +190,10 @@ let funcionario: {
 console.log(funcionario.supervisores)
 console.log(funcionario.baterPonto(8))
 console.log(funcionario.baterPonto(9))
+
+
+// Union Types
+let nota: number | string = 10
+console.log(`Minha nota é ${nota}!`)
+nota = '10'
+console.log(`Minha nota é ${nota}!`)
