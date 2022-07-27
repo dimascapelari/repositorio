@@ -78,3 +78,13 @@ function multiplicar(numA: number, numB: number): number {
 }
 // console.log(multiplicar(2, 'Bia'))
 console.log(multiplicar(4.7, 9))
+
+
+
+// Tipo Função
+let calculo: (x: number, y: number) => number
+// calculo = digaOi
+// calculo()
+
+calculo = multiplicar
+console.log(calculo(5, 6))
