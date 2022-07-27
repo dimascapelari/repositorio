@@ -117,3 +117,11 @@ let nota = 10;
 console.log(`Minha nota é ${nota}!`);
 nota = '10';
 console.log(`Minha nota é ${nota}!`);
+// Checando tipos
+let valor = 30;
+if (typeof valor === "number") {
+    console.log("É um number!");
+}
+else {
+    console.log(typeof valor);
+}
