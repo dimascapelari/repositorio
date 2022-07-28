@@ -10,4 +10,14 @@ function soma(a, b) {
 let qualquerCoisa;
 qualquerCoisa = 12;
 qualquerCoisa = 'abc';
+function saudar(isManha) {
+    let saudacao;
+    if (isManha) {
+        saudacao = 'Bom Dia!';
+    }
+    else {
+        saudacao = 'Tenha uma boa vida!';
+    }
+    return saudacao;
+}
 //# sourceMappingURL=compilador.js.map
