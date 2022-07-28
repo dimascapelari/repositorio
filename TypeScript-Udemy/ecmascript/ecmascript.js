@@ -189,11 +189,11 @@ console.log(primeiroNome, experiencia);
 //     })
 // }
 // esperar3sPromisse().then(dado => console.log(dado))
-fetch('https://swapi.dev/api/people/1')
-    .then(response => response.json())
-    //.then(teste => console.log(teste))
-    .then(personagem => personagem.films)
-    .then(films => fetch(films[0]))
-    .then(resFilm => resFilm.json())
-    .then(filme => console.log(filme.title));
+// fetch('https://swapi.dev/api/people/1')
+//     .then(response => response.json())
+//     //.then(teste => console.log(teste))
+//     .then(personagem => personagem.films)
+//     .then(films => fetch(films[0]))
+//     .then(resFilm => resFilm.json())
+//     .then(filme => console.log(filme.title))
 //# sourceMappingURL=ecmascript.js.map
