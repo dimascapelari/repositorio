@@ -168,3 +168,15 @@ const { nome: n, preco: p, caracteristicas: { w } } = item
 console.log(n)
 console.log(p)
 console.log(w)
+
+
+// Template String
+const usuarioID: string = 'SuperteCod3r'
+const notificacoes: string = '19'
+//const boasVindas = 'Boas vindas ' + usuarioID + 'Notificacoes: ' + notificacoes
+const boasVindas = `
+Boas vindas ${usuarioID},
+Notificações: ${parseInt(notificacoes) > 9 ? '+9' : notificacoes}
+`
+
+console.log(boasVindas)
