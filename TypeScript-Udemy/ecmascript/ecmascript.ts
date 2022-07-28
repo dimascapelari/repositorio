@@ -104,3 +104,14 @@ function contagemRegressiva(inicio: number = 5,
 
 contagemRegressiva()
 contagemRegressiva(3)
+
+
+// Rest & Spread
+const numbers = [1, 10, 99, - 5]
+console.log(Math.max(...numbers))
+
+const turmaA: string[] = ['João', 'Maria', 'Fernanda']
+const turmaB: string[] = ['Fernando', 'Miguel', 'Lorena', ...turmaA]
+
+console.log(turmaB)
+// console.log(...turmaA, ...turmaB)
