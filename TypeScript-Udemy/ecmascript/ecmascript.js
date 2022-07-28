@@ -82,10 +82,16 @@ function contagemRegressiva(inicio = 5, fim = inicio - 5) {
 contagemRegressiva();
 contagemRegressiva(3);
 // Rest & Spread
-const numbers = [1, 10, 99, -5];
+const numbers = [1, 10, 99, -5, 200, 1034];
 console.log(Math.max(...numbers));
 const turmaA = ['João', 'Maria', 'Fernanda'];
 const turmaB = ['Fernando', 'Miguel', 'Lorena', ...turmaA];
 console.log(turmaB);
 // console.log(...turmaA, ...turmaB)
+function retornarArray(...args) {
+    return args;
+}
+const numeros = retornarArray(1, 2, 3, 4, 5, 6, 7, 8, 9);
+console.log(numeros);
+console.log(retornarArray(...numbers));
 //# sourceMappingURL=ecmascript.js.map
