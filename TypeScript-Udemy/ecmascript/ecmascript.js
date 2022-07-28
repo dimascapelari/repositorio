@@ -47,14 +47,14 @@ const saudacao = () => console.log('Olá!');
 saudacao();
 const falarCom = (pessoa) => console.log('Olá ' + pessoa);
 falarCom('Dimas');
-// this
-function normalComThis() {
-    console.log(this);
-}
-normalComThis();
-const normalComThisEspecial = normalComThis.bind(2);
-normalComThisEspecial();
-// this???
-const arrowComThis = () => console.log(this);
-arrowComThis();
+// // this
+// function normalComThis() {
+//     console.log(this)
+// }
+// normalComThis()
+// const normalComThisEspecial = normalComThis.bind(2)
+// normalComThisEspecial()
+// // this???
+// const arrowComThis = () => console.log(this)
+// arrowComThis()
 //# sourceMappingURL=ecmascript.js.map

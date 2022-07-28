@@ -63,15 +63,15 @@ const falarCom = (pessoa: string) => console.log('Olá ' + pessoa)
 falarCom('Dimas')
 
 
-// this
-function normalComThis() {
-    console.log(this)
-}
-normalComThis()
+// // this
+// function normalComThis() {
+//     console.log(this)
+// }
+// normalComThis()
 
-const normalComThisEspecial = normalComThis.bind(2)
-normalComThisEspecial()
+// const normalComThisEspecial = normalComThis.bind(2)
+// normalComThisEspecial()
 
-// this???
-const arrowComThis = () => console.log(this)
-arrowComThis()
+// // this???
+// const arrowComThis = () => console.log(this)
+// arrowComThis()
