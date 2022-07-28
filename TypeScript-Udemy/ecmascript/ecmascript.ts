@@ -124,3 +124,17 @@ function retornarArray(...args: number[]): number[] {
 const numeros = retornarArray(1, 2, 3, 4, 5, 6, 7, 8, 9)
 console.log(numeros)
 console.log(retornarArray(...numbers))
+
+// Rest & Spread (Tupla)
+const tupla: [number, string, boolean] = [1, 'abc', false]
+
+function tuplaParam1(a: number, b: string, c: boolean): void {
+    console.log(`1) ${a} ${b} ${c}`)
+}
+tuplaParam1(...tupla)
+
+function tuplaParam2(...params: [number, string, boolean]) {
+    //console.log(Array.isArray(params))
+    console.log(`2) ${params[0]} ${params[1]} ${params[2]}`)
+}
+tuplaParam2(...tupla)
