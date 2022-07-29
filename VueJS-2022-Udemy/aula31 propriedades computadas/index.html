@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>VueJS-2022-Udemy</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h4>Adicionar pacientes</h4>
+        <span>Nome: </span><input type="text" id="inputNome"><br>
+        <span>Idade: </span><input type="text" id="inputIdade"><br>
+        <span>Plano: </span><input type="text" id="inputPlano"><br>
+        <button @click="adicionarPaciente()">Adicionar</button>
+        <hr>
+        <h4>Último paciente cadastrado</h4>
+        <p v-if="pacientes.length > 0">
+            Paciente {{ pacientes[pacientes.length -1].nome }},
+            Idade {{ pacientes[pacientes.length -1].idade }},
+            Plano {{ pacientes[pacientes.length -1].plano }}
+        </p>
+        <hr>
+        <h4>Pacientes do plano Ouro</h4>
+        <p v-for="p in pacientes">{{ p.plano == 'Ouro' ? p.nome : '' }}</p>
+        <hr>
+        <h4>Pacientes cadastrados</h4>
+        <p v-for="p in pacientes">{{ p.nome }}</p>
+    </div>
+</body>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            pacientes: []
+        },
+        methods: {
+            adicionarPaciente() {
+                this.pacientes.push({
+                    nome: inputNome.value,
+                    idade: inputIdade.value,
+                    plano: inputPlano.value
+                })
+            }
+        }
+    })
+
+</script>
+
+</html>
