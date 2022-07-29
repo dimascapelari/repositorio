@@ -46,6 +46,7 @@ console.log(casamentoEsperto)
 
 
 // Desafio Classe Produto
+
 // Atributos: nome, preco e desconto
 // Criar o construtor
 // Obs 1.: Desconto é opcional (valor padrão 0)
@@ -55,15 +56,30 @@ class Produto {
     constructor(
         public nome: string,
         public preco: number,
-        public desconto: number = 0
-    ) {
-
+        public desconto: number = 0) {
     }
+
+    // Criar método precoComDesconto
+    // Quais são os parâmetros e o retorno?
+    // Alterar método resumo para mostrar o preço com desconto
+
+    // tb é public
+    precoComDesocnto(): number {
+        return this.preco * (1 - this.desconto)
+    }
+
+    public resumo(): string {
+        return `${this.nome} custa R$ ${this.precoComDesocnto()} (${this.desconto * 100}% off)`
+    }
+
 }
 
 const prod1 = new Produto('Caneta Bic Preta', 4.20)
 prod1.desconto = 0.06
-console.log(prod1)
+console.log(prod1.resumo())
 
 const prod2 = new Produto('Caderno Escolar', 18.80, 0.15)
-console.log(prod2)
+console.log(prod2.resumo())
+
+// ----------------------------------------------------------
+
