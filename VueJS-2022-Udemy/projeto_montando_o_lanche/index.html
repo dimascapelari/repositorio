@@ -200,7 +200,8 @@
                 inputHamburguer: '', // input radio
                 etapa: 1,
                 inputNome: '',
-                inputEndereco: ''
+                inputEndereco: '',
+                novoPedidoAssincrono: null
             },
             computed: {
                 pao() {
@@ -263,7 +264,7 @@
                         this.etapa = 3
 
                         // realizar uma requisição http enviando os dados do pedido para o back-end da aplicação
-                        setTimeout(() => this.novoPedido(), 7000)
+                        this.novoPedidoAssincrono = setTimeout(() => this.novoPedido(), 7000)
                     } else {
                         alert('Você precisa informar o seu nome e endereço!')
                     }
@@ -276,6 +277,13 @@
                     this.inputHamburguer = ''
                     this.inputNome = ''
                     this.inputEndereco = ''
+                }
+            },
+            watch: {
+                etapa(novovalor) {
+                    if (novovalor == 1) {
+                        clearTimeout(this.novoPedidoAssincrono)
+                    }
                 }
             }
         })
