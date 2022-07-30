@@ -20,8 +20,105 @@
 </head>
 
 <body>
+    <!-- As a heading -->
+    <nav class="navbar bg-light">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">Monte o seu Lanche</span>
+        </div>
+    </nav>
 
-    <div id="app"></div>
+    <div class="container">
+        <div id="app">
+            <div class="row">
+                <div class="col-md-6">
+                    Imagens do lance
+                </div>
+                <div class="col-md-6">
+                    <!-- TIPO DO PÃO -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
+                                <h5 class="card-header">TIPO DO PÃO</h5>
+                                <div class="card-body">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio">
+                                        <label class="form-check-label">Gergelim</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio">
+                                        <label class="form-check-label">Australiano</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SALADAS -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
+                                <h5 class="card-header">SALADAS</h5>
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label">Alface</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MOLHOS -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
+                                <h5 class="card-header">MOLHOS</h5>
+                                <div class="card-body">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label">Ketchup</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label">Mostarda</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label">Maionese</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TIPO DE HAMBÚRGUER -->
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
+                                <h5 class="card-header">TIPO DE HAMBÚRGUER</h5>
+                                <div class="card-body">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio">
+                                        <label class="form-check-label">Bovino</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio">
+                                        <label class="form-check-label">Frango</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio">
+                                        <label class="form-check-label">Soja</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
     <script>
         const vm = new Vue({
             el: '#app'
