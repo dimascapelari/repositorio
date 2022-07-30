@@ -33,13 +33,13 @@
                 <div class="col-md-6">
                     <div class="row mt-2">
                         <div class="col">
-                            <img src="imagens/padrao/pao_superior.png">
-                            <img src="imagens/padrao/alface.png">
-                            <img src="imagens/padrao/molho.png">
-                            <img src="imagens/padrao/molho.png">
-                            <img src="imagens/padrao/molho.png">
-                            <img src="imagens/padrao/hamburguer.png">
-                            <img src="imagens/padrao/pao_inferior.png">
+                            <img :src="pao[0]">
+                            <img :src="alface">
+                            <img :src="ketchup">
+                            <img :src="mostarda">
+                            <img :src="maionese">
+                            <img :src="hamburguer">
+                            <img :src="pao[1]">
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,27 @@
     </div>
     <script>
         const vm = new Vue({
-            el: '#app'
+            el: '#app',
+            computed: {
+                pao() {
+                    return ['imagens/padrao/pao_superior.png', 'imagens/padrao/pao_inferior.png']
+                },
+                alface() {
+                    return 'imagens/padrao/alface.png'
+                },
+                ketchup() {
+                    return 'imagens/padrao/molho.png'
+                },
+                mostarda() {
+                    return 'imagens/padrao/molho.png'
+                },
+                maionese() {
+                    return 'imagens/padrao/molho.png'
+                },
+                hamburguer() {
+                    return 'imagens/padrao/hamburguer.png'
+                }
+            }
         })
     </script>
 
