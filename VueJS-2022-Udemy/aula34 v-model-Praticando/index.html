@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>VueJS-2022-Udemy</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        {{ paciente }}<br>
+        <!-- <input type="text" :value="paciente" @keyup="paciente = $event.target.value"> -->
+        <input type="text" v-model="paciente">
+        <hr>
+        <input type="radio" value="f" v-model="sexo">Feminino
+        <input type="radio" value="m" v-model="sexo">Masculino
+        <br> {{ sexo }}
+        <hr>
+        <select v-model="plano">
+            <option value="" disabled>Selecione um plano</option>
+            <option value="1">Básico 1</option>
+            <option value="2">Básico 2</option>
+            <option value="3">Básico 3</option>
+        </select>
+        <br> {{ plano }}
+        <hr>
+        <input type="checkbox" value="100" v-model="doencas">Asma
+        <input type="checkbox" value="101" v-model="doencas">Diabetes tipo 1
+        <input type="checkbox" value="102" v-model="doencas">Rinite
+        <br>{{ doencas }}
+        <hr>
+        <textarea v-model="diagnostico"></textarea>
+        <br>{{ diagnostico }}
+    </div>
+</body>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            paciente: 'João da Silva',
+            sexo: '',
+            plano: '',
+            doencas: [],
+            diagnostico: ''
+        },
+        methods: {
+
+        },
+        computed: {
+
+        }
+    })
+
+</script>
+
+</html>
