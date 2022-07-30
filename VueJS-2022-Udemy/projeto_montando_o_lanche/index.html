@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" v-if="etapa == 1">
                     <!-- TIPO DO PÃO -->
                     <div class="row mt-2">
                         <div class="col">
@@ -132,10 +132,41 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row mt-2">
+                        <div class="col d-flex justify-content-end">
+                            <button type="button" class="btn btn-primary" @click="fazerPedido()">Fazer pedido</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" v-if="etapa == 2">
+                    <div class="row mt-2">
+                        <div class="col">
+                            <div class="card">
+                                <h5 class="card-header">INFORME SEUS DADOS</h5>
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Nome</label>
+                                        <input type="text" class="form-control" v-model="inputNome">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Endereço</label>
+                                        <input type="text" class="form-control" v-model="inputEndereco">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="col d-flex justify-content-between">
+                            <button type="button" class="btn btn-warning" @click="etapa -= 1">
+                                Voltar para o lanche
+                            </button>
+                            <button type="button" class="btn btn-success">Confirmar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-
         </div>
     </div>
     <script>
@@ -145,7 +176,10 @@
                 inputTipoPao: '', // input radio
                 inputSaladas: [], // input checkbox
                 inputMolhos: [], // input checkbox
-                inputHamburguer: '' // input radio
+                inputHamburguer: '', // input radio
+                etapa: 1,
+                inputNome: '',
+                inputEndereco: ''
             },
             computed: {
                 pao() {
@@ -192,6 +226,15 @@
                             return 'imagens/soja.png'
                         default:
                             return 'imagens/padrao/hamburguer.png'
+                    }
+                }
+            },
+            methods: {
+                fazerPedido() {
+                    if (this.inputTipoPao && this.inputHamburguer) {
+                        this.etapa = 2
+                    } else {
+                        alert('Selecionar um pão e um hamburguer!')
                     }
                 }
             }
