@@ -173,3 +173,104 @@ const a2 = ['a', 'b', 'c']
 
 showArrayItens(a1)
 showArrayItens(a2)
+
+
+// classes
+class User {
+    name
+    role
+    isApproved
+
+    constructor(name: string, role: string, isApproved: boolean) {
+        this.name = name
+        this.role = role
+        this.isApproved = isApproved
+    }
+    showUserName() {
+        console.log(`O nome do usuário é ${this.name}`)
+    }
+
+    showUserRole(canShow: boolean): void {
+        if (canShow) {
+            console.log(`O tipo do usuário é: ${this.role}`)
+            return
+        }
+        console.log('Informação restrita!')
+    }
+}
+
+const zeca = new User('Zéca', 'Admin', true)
+console.log(zeca)
+
+zeca.showUserName()
+
+zeca.showUserRole(false)
+
+
+// Interfaces em classes
+interface IVehicle {
+    brand: string
+    showBrand(): void
+}
+
+class Car implements IVehicle {
+
+    brand
+    wheels
+
+    constructor(brand: string, wheels: number) {
+        this.brand = brand
+        this.wheels = wheels
+    }
+    showBrand(): void {
+        console.log(`A marca do carro é: ${this.brand}`)
+    }
+}
+
+const fusca = new Car('VW', 4)
+
+fusca.showBrand()
+
+
+// Herança
+class SuperCar extends Car {
+    engine
+
+    constructor(brand: string, wheels: number, engine: number) {
+        super(brand, wheels)
+        this.engine = engine
+    }
+}
+
+const a4 = new SuperCar('Audi', 4, 2.0)
+
+console.log(a4)
+
+a4.showBrand()
+
+
+
+// Decorators -> para funcionar tem que descomentar "experimentalDecorators": true, no tsconfig.json
+
+// Constructor decorator
+function BaseParameters() {
+    return function <T extends { new(...args: any[]): {} }>(constructor: T) {
+        return class extends constructor {
+            id = Math.random()
+            createdAt = new Date()
+        }
+    }
+}
+
+@BaseParameters()
+class Person {
+    name
+
+    constructor(name: string) {
+        this.name = name
+    }
+}
+
+const sam = new Person('Sam')
+
+console.log(sam)
