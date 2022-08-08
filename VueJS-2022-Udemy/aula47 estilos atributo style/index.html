@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>VueJS-2022-Udemy</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Manipulando CSS com Vue.JS</h1>
+        <div :style="estilo">
+            Definindo styles com objetos
+        </div>
+        <button @click="estilo.background = 'red'">Mudar para vermelho</button>
+    </div>
+</body>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            estilo: {
+                background: 'blue',
+                width: 200 + 'px',
+                height: 100 + 'px',
+                padding: 10 + 'px',
+                fontSize: 30 + 'px'
+            }
+        },
+
+    })
+
+</script>
+
+</html>
