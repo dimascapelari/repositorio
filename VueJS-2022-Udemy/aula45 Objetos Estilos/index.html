@@ -8,16 +8,38 @@
     <script src="./vue.js"></script>
     <title>VueJS-2022-Udemy</title>
     <style>
+        .vermelho {
+            background-color: red;
+        }
 
+        .texto-branco {
+            color: white;
+        }
+
+        .destaque {
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
     <div id="app">
         <h1>Manipulando CSS com Vue.JS</h1>
-        <p>
+        <p :class="{ 
+            vermelho: eVermelho, 
+            'texto-branco': eTextoBranco, 
+            destaque: eDestaque }">
             Definindo classes com objetos
         </p>
+        <button @click="eVermelho = !eVermelho">
+            <span v-text="eVermelho ? 'Remover background' : 'Aplicar background'"></span>
+        </button>
+        <button @click="eTextoBranco = !eTextoBranco">
+            <span v-text="eTextoBranco ? 'Remover texto branco' : 'Aplicar texto branco'"></span>
+        </button>
+        <button @click="eDestaque = !eDestaque">
+            <span v-text="eDestaque ? 'Remover destaque' : 'Aplicar destaque'"></span>
+        </button>
     </div>
 </body>
 <script>
@@ -25,7 +47,9 @@
     const vm = new Vue({
         el: '#app',
         data: {
-
+            eVermelho: false,
+            eTextoBranco: false,
+            eDestaque: false
         },
 
     })
