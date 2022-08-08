@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>VueJS-2022-Udemy</title>
+    <style>
+        .vermelho {
+            background-color: red;
+        }
+
+        .texto-branco {
+            color: white;
+        }
+
+        .destaque {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>Manipulando CSS com Vue.JS</h1>
+        <p :class="[estilo2, { vermelho: true, destaque: eDestaque }]">
+            Definindo classes com arrays
+        </p>
+        <button @click="estilo2 = ''">
+            Remover o estilo 2
+        </button>
+        <button @click="eDestaque = !eDestaque">
+            Mudar o destaque
+        </button>
+    </div>
+</body>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            estilo1: 'vermelho',
+            estilo2: 'texto-branco',
+            estilo3: 'destaque',
+            eDestaque: false
+        },
+
+    })
+
+</script>
+
+</html>
