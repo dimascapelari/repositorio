@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>VueJS-2022-Udemy</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ texto1 }}</h1>
+        <p>{{ texto2 }}</p>
+    </div>
+</body>
+<script>
+
+    const vm = new Vue({
+        data: {
+            texto1: 'Template',
+            texto2: 'Formas alternativas de carregar o template'
+        }
+    })
+
+    vm.$mount('#app')
+
+</script>
+
+</html>
