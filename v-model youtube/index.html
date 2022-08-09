@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+    <title>v-model</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <label for="">Nome</label><br>
+        <input type="text" v-model="nome">
+
+        <br><br>
+        <label for="">Telefone</label><br>
+        <input type="text" v-model="telefone">
+
+        <br><br>
+        <label for="">Deseja receber nossas novidades?</label><br>
+        <input type="radio" value="Sim" v-model="novidades"> Sim
+        <input type="radio" value="Não" v-model="novidades"> Não
+
+        <br><br>
+        <label for="">Interesses</label><br>
+        <input type="checkbox" value="Futebol" v-model="interesses">Futebol<br>
+        <input type="checkbox" value="Formula 1" v-model="interesses">Formula 1<br>
+        <input type="checkbox" value="Corrida" v-model="interesses">Corrida<br>
+
+        <br><br>
+        <label for="">Como nos conheceu?</label><br>
+        <select v-model="conheceu">
+            <option value="">Escolha</option>
+            <option value="Google">Google</option>
+            <option value="TV">TV</option>
+            <option value="Revista">Revista</option>
+        </select>
+        <br><br>
+        <button>ENVIAR</button>
+
+        <hr>
+
+        Nome: {{ nome }} <br>
+        Telefone: {{ telefone }} <br>
+        Novidades: {{ novidades }} <br>
+        Interesses: {{ interesses }} <br>
+        Como nos conheceu? {{ conheceu }} <br>
+
+    </div>
+</body>
+<script>
+
+    const vm = new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Vue.JS v-model',
+            nome: '',
+            telefone: '',
+            novidades: '',
+            interesses: [],
+            conheceu: ''
+        }
+    })
+
+</script>
+
+</html>
