@@ -52,6 +52,7 @@ class Produto {
     precoComDesocnto() {
         return this.preco * (1 - this.desconto);
     }
+    // UMA FUNÇÃO DENTRO DE UMA CLASSE É UM METHODO
     resumo() {
         return `${this.nome} custa R$ ${this.precoComDesocnto()} (${this.desconto * 100}% off)`;
     }

@@ -75,6 +75,7 @@ class Produto {
         return this.preco * (1 - this.desconto)
     }
 
+    // UMA FUNÇÃO DENTRO DE UMA CLASSE É UM METHODO
     public resumo(): string {
         return `${this.nome} custa R$ ${this.precoComDesocnto()} (${this.desconto * 100}% off)`
     }
