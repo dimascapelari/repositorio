@@ -13,6 +13,12 @@ console.log(aniversario);
 const casamento = new Data; // posso omitir os "()"
 casamento.ano = 2017;
 console.log(casamento);
+const niverDimas = new Data;
+niverDimas.dia = 26;
+niverDimas.mes = 7;
+niverDimas.ano = 1982;
+console.log(niverDimas.dia);
+console.log(niverDimas);
 // ----------------------------------------------------------
 class DataEsperta {
     constructor(dia = 1, mes = 1, ano = 1970) {
