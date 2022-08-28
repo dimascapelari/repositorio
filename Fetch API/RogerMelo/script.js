@@ -1,4 +1,4 @@
-console.log('olá mundo')
+console.log('Olá Mundo')
 
 const fetchPokemon = () => {
     const url = `https://pokeapi.co/api/v2/pokemon/25`
