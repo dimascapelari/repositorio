@@ -17,7 +17,6 @@ $(document).ready(function () {
             circle.setText(value)
 
         }
-
     })
 
     let containerB = document.getElementById('circleB')
