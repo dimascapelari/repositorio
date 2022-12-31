@@ -4,3 +4,8 @@ function teste() {
 }
 
 teste();
+
+
+function testeDois(){
+
+}
