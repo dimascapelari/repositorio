@@ -1,4 +1,4 @@
-/*
+
 function teste() {
   let teste2 = "teste2";
   console.log("teste2");
@@ -9,7 +9,7 @@ function testeDois() {
   console.log("Feliz 2023");
 }
 testeDois();
-*/
+
 
 // -------------------------------------
 var a = 5;
