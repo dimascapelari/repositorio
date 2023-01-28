@@ -19,7 +19,7 @@ const listaProdutos = () => {
     .then((response) => response.json())
     .then((lista) => {
       console.log(lista);
-      console.log(lista.products);
+      //console.log(lista.products);
       console.log("name: ", lista.products[0].name);
       console.log("brand: ", lista.products[0].brand);
       console.log("description: ", lista.products[0].description);
