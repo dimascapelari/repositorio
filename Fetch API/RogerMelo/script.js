@@ -29,3 +29,31 @@ const listaProdutos = () => {
 
 listaProdutos();
 
+------------------------------------
+
+let teste = fetch(
+  `https://mks-challenge-api-frontend.herokuapp.com/api/v1/products?page=1&rows=6&sortBy=id&orderBy=DESC`
+)
+  .then((response) => response.json())
+  .then((lista) => {
+    // console.log(lista.products[0].name);
+    // console.log(lista.products[1].name);
+    // console.log(lista.products[2].name);
+    // console.log(lista.products[3].name);
+    // console.log(lista.products[4].name);
+    // console.log(lista.products[5].name);
+  });
+
+function getTeste() {
+  let r = fetch(
+    `https://mks-challenge-api-frontend.herokuapp.com/api/v1/products?page=1&rows=6&sortBy=id&orderBy=DESC`
+  )
+    .then((response) => response.json())
+    .then((lista) => {
+      return console.log(lista.products);
+    });
+  // console.log(lista);
+  console.log(lista.products);
+}
+
+getTeste();
