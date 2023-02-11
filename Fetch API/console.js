@@ -29,4 +29,7 @@ console.log(arr[0]);
 console.log(arr[1]);
 console.log(arr[2]);
 // --------------------------------------
-
+for (var i = 0; i < 5; i++) {
+  console.log(i);
+}
+// --------------------------------------
